@@ -13,28 +13,13 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "Building Resilient Systems: Lessons from Production",
-    excerpt: "What happens when your database decides to take an unscheduled vacation? A deep dive into failure modes and how to design systems that gracefully handle the unexpected.",
-    date: "2024-12-15",
-    readTime: "8 min",
-    tags: ["systems", "architecture", "reliability"],
-  },
-  {
-    id: "2",
-    title: "The Art of Writing Clear Code",
-    excerpt: "Code is read far more often than it's written. Exploring the principles that make code not just functional, but comprehensible to future readers—including yourself.",
-    date: "2024-11-28",
+    title: "Beauty lies in the AI of the beholder",
+    excerpt: "Well, well, well. Looks like we've reached a new level of society's obsession with rating our looks. Now, not only do we have to deal with humans judging us, but machines too!",
+    date: "2020-07-23",
     readTime: "6 min",
-    tags: ["clean-code", "practices"],
+    tags: ["Machine Learning", "Deep Learning", "Python"],
   },
-  {
-    id: "3",
-    title: "Distributed Systems: A Practical Introduction",
-    excerpt: "Navigating the complexities of distributed computing without drowning in theory. CAP theorem, eventual consistency, and why your data might be lying to you.",
-    date: "2024-10-12",
-    readTime: "12 min",
-    tags: ["distributed-systems", "fundamentals"],
-  },
+  
 ];
 
 export default function Blogs() {
@@ -46,7 +31,7 @@ export default function Blogs() {
             // Technical Blogs
           </p>
           <h1 className="text-2xl md:text-3xl font-mono font-medium mb-4">
-            Writing on code, systems, and craft
+            All things tech
           </h1>
           <p className="text-muted-foreground">
             Long-form explorations of engineering problems, solutions, and the 

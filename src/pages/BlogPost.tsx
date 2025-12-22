@@ -1,7 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import trash_image from "@/assets/trash.png";
+import beauty from "@/assets/beauty.png";
 interface BlogPost {
   id: string;
   title: string;
@@ -16,112 +16,27 @@ interface BlogPost {
 const blogPosts: Record<string, BlogPost> = {
   "1": {
     id: "1",
-    title: "The Un-Thrown Trash",
-    date: "2023-05-15",
-    readTime: "2 min",
-    tags: ["thoughts", "symbolism", "prose"],
-    heroImage: trash_image,
+    title: "Beauty lies in the AI of the beholder",
+    date: "2020-07-27",
+    readTime: "6 min",
+    tags: ["Machine Learning", "Deep Learning", "Python"],
+    heroImage: beauty,
     content: `
-When I was growing up, my mother had a strict rule: throwing out the trash every evening before my parents came home. Forgetting this chore was inexcusable, as she insisted that the kitchen would become engulfed in the sour stench of leftovers—a smell she attributed to neglect. This non-negotiable rule had no clause for my busy routine or tiring day. There was something about the tone that struck me. It was stern but purposeful. Years later, when I entered adulthood, I realized that perhaps it wasn't just about throwing the trash.
+Well, well, well. Looks like we've reached a new level of society's obsession with rating our looks. Now, not only do we have to deal with humans judging us, but machines too! Machine learning, or ML for the uninitiated, is everywhere we turn. From Google search results to personalized music playlists on Spotify, and even the shows recommended to us on Netflix and Amazon Prime, all of it is credited to ML. We're drowning in a sea of data, and if we don't analyze it, it's just useless information.
 
-Both my parents worked long hours. Being in the same field of work, they became partners in every sense—balancing work, raising me in a country that wasn't our own but eventually became home, and keeping the household running like a precisely built bridge, perhaps inspired by their daily course of work. Our kitchen was their sacred space. My dad would slice vegetables or meat with the finesse of a craftsman, my mom would stir a pot, and amidst the whistles of the pressure cooker as old as me, they'd confide in each other about the pressures of their task deadlines. Sometimes, it would just be quietness complementing the boiling water, a stark contrast to a possible chaotic day. Despite their separate worlds during the day, the kitchen was where they united, perhaps explaining why she was insistent on clearing away the worries and remnants of the previous day.
+But wait, there's more! Deep learning is a fancy subset of ML that's inspired by our brains. It's all about neurons and layers, and moving data from one to the other with weighted channels and biases. Basically, it's like playing a game of telephone with your data, except there's no room for misinterpretation. Google Assistant and Alexa are two popular examples of deep learning in action.
+ 
+Now, let's talk about something that I have been working over a month. This was inspired from a conversation that I had with one of my friends. He asked me whether it would be possible for computers to rate beauty. Who knew that couple of months later I would end up doing that. I decided to use the Chicago Face dataset to create not one, but two models, a machine learning model and a deep learning model with convolutional neural networks and transfer learning using the VGG dataset. The Chicago Face dataset has images of 597 men and women, complete with facial proportions and an attractiveness score. So, I decided to use it to rate myself. Yup, I went there.
 
-There's something symbolic about trash—letting go of what we no longer need and, more importantly, what no longer needs us. My mom used to say, “You need to throw it away before it consumes your space”. And in a way, that is life too. How often do we cling to things—grudges, fears, past mistakes—holding on just a bit too long until they begin to taint our present? Throwing out the trash wasn't just a chore; it was a lesson in knowing when to take action and when to let go. Though the perfect moment might elude us as it flits by, we can unmistakably feel the pang of it slipping past us.   
+My regression-based machine learning model rates my face based on the dimensions of different parts of my face. Pretty insane, right? The second model is even crazier. It rates us based purely on our images by utilizing the biases of the VGG Face dataset. So, all you have to do is load an image and let the machine do the rest. Simple, huh? Well, not really.
 
+After all that work, I have come to the realization that it's much easier for society to rate us. They can do it faster and from a distance, without needing high-resolution images. And as for my rating? Well, let's just say the machine gave me a 3.12 out of 7.00. Not great, but not the worst either. The highest score in the dataset was a 5.47 out of 7.00, so there's always room for improvement.
 
-Fast forward to adulthood, to my rented flat, where the evenings are much quieter. My flatmate and I, busy with work and life, often forget the little things—like looking after ourselves and, most importantly, throwing out the trash. More than once, we've come home to that familiar smell, both of us looking sheepish, reminded of the routines we've neglected. It's funny how life circles back. The simple task that my mom enforced with such rigidity now feels like a lifeline back to that warm kitchen, the clatter of pots, and the hum of my parents' quiet chatter. In such moments, I am back home in that small kitchen with that bright 20W tube light, realizing how my parents taught me not just how to take care of a home but how to take care of life.
+But let's be real here, the whole model is just perpetuating stereotypes. Each person in the dataset was rated based on society's definition of beauty, which we've all been force-fed through generations of advertisements and media. It's no wonder even a machine can learn these stereotypes with ease. So, the next time you feel the need to rate someone's looks, just remember: you're perpetuating societal stereotypes that we've all been brainwashed into believing. 
+
+The project can be viewed [here](https://github.com/Pavithra-Rajan/Beauty-Predictor). Additional information has been added to the repository.
 `
   },
-  "2": {
-    id: "2",
-    title: "The Art of Writing Clear Code",
-    excerpt: "Code is read far more often than it's written. Exploring the principles that make code not just functional, but comprehensible to future readers—including yourself.",
-    date: "2024-11-28",
-    readTime: "6 min",
-    tags: ["clean-code", "practices"],
-    content: `
-## Why Clarity Matters
-
-Code is a form of communication. Yes, it tells computers what to do, but more importantly, it tells other developers (including future you) what you *intended* to do.
-
-## Naming Things
-
-> "There are only two hard things in Computer Science: cache invalidation and naming things."
-
-Good names are self-documenting:
-
-\`\`\`typescript
-// Bad
-const d = new Date();
-const u = users.filter(x => x.a);
-
-// Good  
-const currentDate = new Date();
-const activeUsers = users.filter(user => user.isActive);
-\`\`\`
-
-## Functions Should Do One Thing
-
-A function that does one thing well is easier to test, debug, and reuse:
-
-\`\`\`typescript
-// Instead of one giant function
-function processUserData(user: User): void {
-  // Validate
-  // Transform
-  // Save
-  // Notify
-}
-
-// Break it down
-function validateUser(user: User): ValidationResult { }
-function transformUserData(user: User): ProcessedUser { }
-function saveUser(user: ProcessedUser): void { }
-function notifyUserCreated(user: ProcessedUser): void { }
-\`\`\`
-
-The path to clarity is paved with small, focused functions.
-    `
-  },
-  "3": {
-    id: "3",
-    title: "Distributed Systems: A Practical Introduction",
-    excerpt: "Navigating the complexities of distributed computing without drowning in theory. CAP theorem, eventual consistency, and why your data might be lying to you.",
-    date: "2024-10-12",
-    readTime: "12 min",
-    tags: ["distributed-systems", "fundamentals"],
-    content: `
-## What Is a Distributed System?
-
-A distributed system is a collection of independent computers that appears to its users as a single coherent system. Simple definition, complex reality.
-
-## The CAP Theorem
-
-You can only pick two:
-- **Consistency**: Every read receives the most recent write
-- **Availability**: Every request receives a response
-- **Partition Tolerance**: The system continues despite network failures
-
-In practice, partitions happen. So you're really choosing between consistency and availability.
-
-## Eventual Consistency
-
-Sometimes "good enough" is actually good enough. Many systems don't need immediate consistency:
-
-\`\`\`typescript
-// This is fine for many use cases
-await updateUserProfile(userId, newData);
-// The read might return stale data briefly
-const profile = await getUserProfile(userId);
-\`\`\`
-
-The key is understanding when eventual consistency is acceptable and when it isn't.
-
-## More to explore...
-
-This is just the beginning. Future posts will dive into consensus algorithms, distributed transactions, and the joys of debugging systems where time is relative.
-    `
-  }
 };
 
 function formatDate(dateString: string): string {
@@ -271,13 +186,32 @@ export default function BlogPost() {
               );
             }
 
-            // Handle paragraphs
+            // Handle paragraphs with links
             if (line.trim() && !line.trim().startsWith('```')) {
-              return (
+            const parts = line.split(/(\[.*?\]\(.*?\))/g);
+
+            return (
                 <p key={index} className="text-foreground/90 leading-relaxed mb-4">
-                  {line}
+                {parts.map((part, i) => {
+                    const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+                    if (linkMatch) {
+                    const [, text, href] = linkMatch;
+                    return (
+                        <a
+                        key={i}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 hover:text-foreground transition-colors"
+                        >
+                        {text}
+                        </a>
+                    );
+                    }
+                    return part;
+                })}
                 </p>
-              );
+            );
             }
 
             return null;
