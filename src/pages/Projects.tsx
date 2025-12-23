@@ -13,45 +13,66 @@ const projects: Project[] = [
   {
     id: "1",
     title: "Zone",
-    description: "An Agentic event scheduler powered by Gemini and Google Cal API",
+    description: "An Agentic event scheduler powered by Gemini and Google Cal API to plan your day effectively with time blockings",
     techStack: ["React", "FastAPI", "Gemini API", "Google Calendar API"],
     outcome: "Developed as part of ODSC 2025 Hackathon, NYC",
     link: "https://github.com/Pavithra-Rajan/zone"
   },
   {
     id: "2",
-    title: "Real-time Analytics Pipeline",
-    description: "Stream processing system for analyzing user behavior patterns, enabling instant insights and anomaly detection.",
-    techStack: ["Apache Kafka", "Flink", "PostgreSQL", "Grafana"],
-    outcome: "Processing 100K+ events/second with 99.9% uptime",
+    title: "VulCAN: Vulnerability Code Analyser",
+    description: "A scalable code vulnerability analyser for GitHub repositories hosted on AWS",
+    techStack: ["JavaScript", "AWS Fargate", "SQS", "SES", "S3", "RDS", "Flask", "Semgrep"],
+    outcome: "As part of NYU Cloud Computing Course Project, Fall 2025",
+    link: "https://github.com/NYU-Cloud/Vulnerability-Detector"
   },
   {
     id: "3",
-    title: "CLI Task Manager",
-    description: "A terminal-based productivity tool inspired by mechanical keyboard workflows. Minimalist interface, maximum efficiency.",
-    techStack: ["Rust", "SQLite", "Crossterm"],
-    outcome: "Open-source project with 500+ GitHub stars",
+    title: "swimiNIT",
+    description: "A mobile app to manage NITC\'s swimming pool users and employees",
+    techStack: ["Flutter", "Firebase", "SDLC"],
+    outcome: "As part of NITC Software Engineering Laboratory Course Project, S7 2022",
+    link: "https://github.com/Pavithra-Rajan/swimiNIT"
   },
   {
     id: "4",
-    title: "Machine Learning Infrastructure",
-    description: "Automated ML pipeline for training, versioning, and deploying models at scale. Built for reproducibility and collaboration.",
-    techStack: ["Python", "MLflow", "Docker", "AWS"],
-    outcome: "Reduced model deployment time from days to hours",
+    title: "AWS EKS Deployment Pipeline",
+    description: "A persistent To-Do application deployed on AWS EKS with CI/CD pipeline and monitoring",
+    techStack: ["EKS", "Docker", "Prometheus"],
+    outcome: "As part of NYU Cloud Computing Course Assignment 2, Fall 2025",
+    link: "https://github.com/Pavithra-Rajan/EKS-Deployment"
   },
   {
     id: "5",
-    title: "Typography Experiment Engine",
-    description: "Generative art system that creates typographic compositions based on text input. Exploring the intersection of code and visual design.",
-    techStack: ["TypeScript", "Canvas API", "WebGL"],
-    outcome: "Featured in digital art exhibition",
+    title: "Dining Concierge Chatbot",
+    description: "A web-based interactive dining concierge chatbot using Amazon Lex powered with Yelp API integration",
+    techStack: ["AWS Lex", "Lambda", "SQS", "SES", "DynamoDB", "API Gateway", "AWS OpenSearch"],
+    outcome: "As part of NYU Cloud Computing Course Assignment 1, Fall 2025",
+    link: "https://github.com/Pavithra-Rajan/Dining-Concierge-Chatbot"
   },
   {
     id: "6",
-    title: "API Gateway Framework",
-    description: "Lightweight, extensible API gateway with built-in rate limiting, authentication, and request transformation.",
-    techStack: ["Node.js", "Express", "Redis", "JWT"],
-    outcome: "Handling 50M+ requests daily in production",
+    title: "Intelligent Photo Album Organizer",
+    description: "A photo album organizer that categorizes and tags images using AWS Rekognition and stores it into S3 with metadata on OpenSearch",
+    techStack: ["AWS OpenSearch", "Rekognition", "CloudFormation", "AWS Lex", "Lambda", "S3"],
+    outcome: "As part of NYU Cloud Computing Course Assignment 3, Fall 2025",
+    link: "https://github.com/Pavithra-Rajan/CS-GY-9223-Cloud-Assg3-Album"
+  },
+  {
+    id: "7",
+    title: "Cache Performance Evaluation and Parallelism Analysis",
+    description: "Analyzed cache performance by comparing hit time, miss rate, and AMAT while varying L1 and L2 cache sizes.",
+    techStack: ["Python", "gem5 simulator", "C", "CUDA"],
+    outcome: "As part of NITC Computer Architecture Course Project, S8 2023",
+    link: "https://github.com/Pavithra-Rajan/Computer-Architecture"
+  },
+  {
+    id: "8",
+    title: "Expense Tracker App",
+    description: "A web application to track personal expenses with features like adding, editing, deleting expenses, and visualizing spending patterns. Conducted stress testing with JMeter.",
+    techStack: ["HTML", "CSS", "JavaScript", "JMeter"],
+    outcome: "As part of NITC Web Design and Programming Course Project, S8 2023",
+    link: "https://github.com/Pavithra-Rajan/Expense-Tracker-App"
   },
 ];
 
@@ -68,7 +89,7 @@ export default function Projects() {
           </h1>
           <p className="text-muted-foreground max-w-xl">
             A selection of projects that represent my approach to problem-solving: 
-            thoughtful, well-engineered, and built to last.
+            thoughtful and well-engineered.
           </p>
         </header>
 
