@@ -12,38 +12,37 @@ interface WorkExperience {
 const experiences: WorkExperience[] = [
   {
     id: "1",
-    company: "Tech Company",
-    role: "Senior Software Engineer",
-    period: "2022 — Present",
-    description: "Leading backend architecture for core platform services, mentoring junior engineers, and driving technical decisions across teams.",
+    company: "D. E. Shaw & Co",
+    role: "Senior Member, Tech",
+    period: "Jan 2025 — Jul 2025",
+    description: "Took lead in maintaining ELK infrastructure, ensuring high availability and performance for critical applications.",
     highlights: [
-      "Redesigned authentication system, improving security and reducing login latency by 40%",
-      "Led migration from monolith to microservices, enabling independent team deployments",
-      "Established engineering best practices and code review standards",
+      "Managed a 900TB ELK production cluster as one of five administrators. Improved cluster storage efficiency by 12% through GPFS snapshotting and automated offline snapshot workflows.", 
+      "Set-up the Linux infrastructure for a new datacenter involving time servers, PXE boot servers, and authentication servers.",
     ],
   },
   {
     id: "2",
-    company: "Startup Inc",
-    role: "Software Engineer",
-    period: "2020 — 2022",
-    description: "Full-stack development in a fast-paced environment, shipping features that directly impacted user growth and retention.",
+    company: "D. E. Shaw & Co",
+    role: "Member Tech",
+    period: "Jul 2023 — Dec 2024",
+    description: "Garnered restricted access to administer critical infrastructure systems, ensuring their reliability and security.",
     highlights: [
-      "Built real-time collaboration features used by 10K+ daily active users",
-      "Implemented A/B testing framework that improved conversion by 25%",
-      "Optimized database queries, reducing page load times by 60%",
+      "Administered 6,000+ RHEL servers with privileged root access. Executed releases across 300+ infrastructure servers and independently led RHEL7 to RHEL8 migration for provisioning, SFTP, and utility servers.",
+      "Collaborated on migration from SearchGuard to Elastic Security by developing scripts and implementing critical configuration changes.",
+      "Spearheaded GitHub Enterprise Server operations as one of three global administrators, supporting 1,600+ repositories and 2,000+ users.",
+      "Led upgrades, deployed infrastructure for Dependabot and GitHub Actions runners, and served as the primary escalation point of contact.",
     ],
   },
   {
     id: "3",
-    company: "Research Lab",
-    role: "Research Assistant",
-    period: "2018 — 2020",
-    description: "Conducted research on distributed systems and machine learning, publishing papers and developing experimental prototypes.",
+    company: "D. E. Shaw & Co",
+    role: "System Engineering Intern",
+    period: "May 2022 — Jul 2022",
+    description: "Gained hands-on experience with PKI infrastructure and certificate lifecycle management.",
     highlights: [
-      "Co-authored paper on efficient data replication strategies",
-      "Developed ML pipeline for natural language processing research",
-      "Mentored undergraduate students on research methodologies",
+      "Designed and developed a Certificate Manager to manage the lifecycle of X.509 certificates for the firm's internal websites and services.",
+      "Reduced operational toil of SRE engineers in the firm by approximately 35 hours each month.",
     ],
   },
 ];
@@ -60,8 +59,7 @@ export default function Work() {
             Professional journey
           </h1>
           <p className="text-muted-foreground">
-            A timeline of roles, responsibilities, and impact. 
-            Focus on what matters: building things that work.
+            A timeline of roles, responsibilities, and impact.
           </p>
         </header>
 
