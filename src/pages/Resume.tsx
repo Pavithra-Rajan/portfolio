@@ -1,5 +1,14 @@
 import { Layout } from "@/components/Layout";
 import { Download } from "lucide-react";
+import resumePdf from "@/assets/Pavithra_Rajan_Resume.pdf";
+
+
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = resumePdf;
+  link.download = "Pavithra_Rajan_Resume.pdf";
+  link.click();
+};
 
 export default function Resume() {
   return (
@@ -11,29 +20,23 @@ export default function Resume() {
               // Resume
             </p>
             <h1 className="text-2xl md:text-3xl font-mono font-medium">
-              Your Name
+              Pavithra Rajan
             </h1>
             <p className="text-muted-foreground mt-1">
-              Software Engineer • Writer • Builder
+              Systems Engineer • Problem Solver • Developer
             </p>
           </div>
-          
-          <button className="key self-start flex items-center gap-2">
-            <Download className="w-4 h-4" />
-            <span>Download PDF</span>
-          </button>
+          <button
+          onClick={handleDownload}
+          className="key self-start flex items-center gap-2"
+        >
+          <Download className="w-4 h-4" />
+          <span>Download PDF</span>
+        </button>
         </header>
 
         {/* Resume Content */}
         <div className="space-y-10 opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
-          {/* Contact */}
-          <section>
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm font-mono text-muted-foreground">
-              <span>hello@example.com</span>
-              <span>github.com/username</span>
-              <span>linkedin.com/in/username</span>
-            </div>
-          </section>
 
           {/* Summary */}
           <section>
@@ -41,9 +44,7 @@ export default function Resume() {
               Summary
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Software engineer with 5+ years of experience building scalable systems and 
-              leading technical initiatives. Passionate about clean code, thoughtful 
-              architecture, and the craft of engineering.
+              Systems-minded engineer who enjoys turning complexity into clarity. Drawn to problems at scale, where reliability, performance, and thoughtful design matter just as much as the code itself. Cares deeply about building technology that feels robust, intentional, and human.
             </p>
           </section>
 
@@ -52,34 +53,29 @@ export default function Resume() {
             <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
               Experience
             </h2>
+            <h4 className="text-sm text-muted-foreground font-mono mb-2">
+              More details in the Work section.
+            </h4>
             <div className="space-y-6">
               <ResumeEntry
-                title="Senior Software Engineer"
-                organization="Tech Company"
-                period="2022 — Present"
+                title="Senior Member, Tech"
+                organization="D. E. Shaw & Co"
+                period="Jan 2025 — Jul 2025"
                 items={[
-                  "Led backend architecture for core platform services",
-                  "Redesigned authentication system, reducing latency by 40%",
-                  "Mentored team of 4 junior engineers",
                 ]}
               />
               <ResumeEntry
-                title="Software Engineer"
-                organization="Startup Inc"
-                period="2020 — 2022"
+                title="Member, Tech"
+                organization="D. E. Shaw & Co"
+                period="Jul 2023 — Dec 2024"
                 items={[
-                  "Built real-time collaboration features for 10K+ users",
-                  "Implemented A/B testing framework improving conversion 25%",
-                  "Optimized database queries, reducing load times by 60%",
                 ]}
               />
               <ResumeEntry
-                title="Research Assistant"
-                organization="Research Lab"
-                period="2018 — 2020"
+                title="Systems Engineering Intern"
+                organization="D. E. Shaw & Co"
+                period="May 2022 — Jul 2022"
                 items={[
-                  "Published research on distributed systems",
-                  "Developed ML pipeline for NLP research",
                 ]}
               />
             </div>
@@ -92,16 +88,37 @@ export default function Resume() {
             </h2>
             <div className="space-y-4">
               <ResumeEntry
-                title="M.S. Computer Science"
-                organization="University Name"
-                period="2018 — 2020"
-                items={["Focus: Distributed Systems, Machine Learning"]}
+                title="New York University"
+                organization="M.S. Computer Science"
+                period="Sept 2025 — May 2027"
+                items={[
+                  "GPA: 4.0/4.0",
+                  "Focus: Distributed Systems, Secure Systems, Machine Learning",
+                ]}
               />
               <ResumeEntry
-                title="B.S. Computer Science"
-                organization="University Name"
-                period="2014 — 2018"
-                items={["Magna Cum Laude"]}
+                title="National Institute of Technology, Calicut"
+                organization="B.Tech Computer Science and Engineering"
+                period="Jul 2019 — May 2023"
+                items={["GPA: 3.82/4.0, First Class Distinction"]}
+              />
+            </div>
+          </section>
+
+          {/* Publications */}
+          <section>
+            <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
+              Publications
+            </h2>
+            <div className="space-y-4">
+              <ResumeEntry
+                title="Proof-of-Variable-Authority: A Blockchain Consensus Mechanism for Securing IoT Networks"
+                organization="International Conference on Information Systems Security (ICISS) 2023"
+                period=""
+                items={[
+                  "Designed a custom blockchain consensus mechanism with a robust PKI system to secure IoT networks, enabling seamless device authentication through device certificates.", 
+                  "Developed a Proof-of-Concept to demonstrate the end-to-end functionality of the design.",
+                ]}
               />
             </div>
           </section>
@@ -115,13 +132,7 @@ export default function Resume() {
               <div>
                 <h3 className="font-medium mb-2">Languages</h3>
                 <p className="text-muted-foreground">
-                  Go, Python, TypeScript, Rust, SQL
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium mb-2">Technologies</h3>
-                <p className="text-muted-foreground">
-                  Kubernetes, PostgreSQL, Redis, Kafka
+                  Python, Python, Bash, C/C++
                 </p>
               </div>
               <div>
@@ -131,21 +142,21 @@ export default function Resume() {
                 </p>
               </div>
               <div>
-                <h3 className="font-medium mb-2">Interests</h3>
+                <h3 className="font-medium mb-2">Administration Expertise</h3>
                 <p className="text-muted-foreground">
-                  Distributed Systems, Developer Tools, Typography
+                  Enterprise Github, ELK Stack, Linux, GPFS
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium mb-2">Technologies</h3>
+                <p className="text-muted-foreground">
+                  Puppet, ReactJS, Flutter, Grafana, Prometheus, FastAPI, HashiCorp Vault, AWS (RDS,DynamoDB, EC2, Lambda, Lex, SQS, EKS, CloudFormation), Docker, Semgrep, OpenAI API, Gemini
                 </p>
               </div>
             </div>
           </section>
         </div>
 
-        {/* Print note */}
-        <div className="mt-12 pt-8 border-t border-border opacity-0 animate-fade-in-up animation-delay-300" style={{ animationFillMode: 'forwards' }}>
-          <p className="text-xs text-muted-foreground font-mono">
-            // This page is designed to be printer-friendly. Use Ctrl+P to print.
-          </p>
-        </div>
       </div>
     </Layout>
   );
