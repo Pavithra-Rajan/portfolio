@@ -48,6 +48,39 @@ export default function Resume() {
             </p>
           </section>
 
+          {/* Skills */}
+          <section>
+            <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
+              Skills
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+              <div>
+                <h3 className="font-medium mb-2">Languages</h3>
+                <p className="text-muted-foreground">
+                  Python, Python, Bash, C/C++
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium mb-2">Practices</h3>
+                <p className="text-muted-foreground">
+                  System Design, Code Review, Technical Writing
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium mb-2">Administration Expertise</h3>
+                <p className="text-muted-foreground">
+                  Enterprise Github, ELK Stack, Linux, GPFS
+                </p>
+              </div>
+              <div>
+                <h3 className="font-medium mb-2">Technologies</h3>
+                <p className="text-muted-foreground">
+                  Puppet, ReactJS, Flutter, Grafana, Prometheus, FastAPI, HashiCorp Vault, AWS (RDS,DynamoDB, EC2, Lambda, Lex, SQS, EKS, CloudFormation), Docker, Semgrep, OpenAI API, Gemini
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Experience */}
           <section>
             <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
@@ -123,38 +156,7 @@ export default function Resume() {
             </div>
           </section>
 
-          {/* Skills */}
-          <section>
-            <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
-              Skills
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-              <div>
-                <h3 className="font-medium mb-2">Languages</h3>
-                <p className="text-muted-foreground">
-                  Python, Python, Bash, C/C++
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium mb-2">Practices</h3>
-                <p className="text-muted-foreground">
-                  System Design, Code Review, Technical Writing
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium mb-2">Administration Expertise</h3>
-                <p className="text-muted-foreground">
-                  Enterprise Github, ELK Stack, Linux, GPFS
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium mb-2">Technologies</h3>
-                <p className="text-muted-foreground">
-                  Puppet, ReactJS, Flutter, Grafana, Prometheus, FastAPI, HashiCorp Vault, AWS (RDS,DynamoDB, EC2, Lambda, Lex, SQS, EKS, CloudFormation), Docker, Semgrep, OpenAI API, Gemini
-                </p>
-              </div>
-            </div>
-          </section>
+          
         </div>
 
       </div>
