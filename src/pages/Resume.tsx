@@ -86,9 +86,9 @@ export default function Resume() {
             <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
               Experience
             </h2>
-            <h4 className="text-sm text-muted-foreground font-mono mb-2">
+            <h5 className="text-sm text-muted-foreground font-mono mb-2">
               More details in the Work section.
-            </h4>
+            </h5>
             <div className="space-y-6">
               <ResumeEntry
                 title="Senior Member, Tech"
@@ -156,7 +156,55 @@ export default function Resume() {
             </div>
           </section>
 
-          
+          <section>
+            <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
+              Hackathons
+            </h2>
+            <div className="space-y-4">
+              <ResumeEntry
+                title="Hack Dibner 2025 - 1st runner up"
+                organization="NYU Dibner Library"
+                period="Dec 2025"
+                items={[
+                  "Designed an occupancy detection system with PIR sensors to monitor and display real-time seating availability in library study areas, enhancing user experience and space utilization.",
+                ]}
+              />
+              <ResumeEntry
+                title="Infinity Hacks - 2nd runner up"
+                organization="D. E. Shaw & Co [400+ participants]"
+                period="Sept 2023"
+                items={[
+                  "Developed an AI-powered tool to create a secondary brain for developers of the firm to store and retrieve internal documentation, Slack threads, mails using natural language queries, enhancing information accessibility and productivity.",
+                ]}
+              />
+              <ResumeEntry
+                title="NITCkathon - 1st runner up"
+                organization="JMR Infotech x NIT Calicut [100+ participants]"
+                period="Mar 2023"
+                items={[
+                  "Implemented a predictor for consumer buying behavior powered by ML, analyzing historical data to forecast purchasing trends and enhance marketing strategies.",
+                  "Designed and developed a user-friendly web application to present the predictive insights effectively.",
+                ]}
+              />
+              <ResumeEntry
+                title="Code-Init() - 1st runner up"
+                organization="CSEA, NIT Calicut [200+ participants]"
+                period="Sept 2021"
+                items={[
+                  "Created an intuitive timetable generator based on institute slots at NIT Calicut, optimizing class schedules for students.",
+                ]}
+              />
+              <ResumeEntry
+                title="Code for Good - Participant"
+                organization="JP Morgan and Chase [400+ participants shortlisted from 15,000 applicants]"
+                period="Jul 2021"
+                items={[
+                  "Developed a web application to connect volunteers with NGOs for social good initiatives, facilitating collaboration and community engagement.",
+                  "Implemented and deployed an ML-based recommendation system to match volunteers with suitable NGOs based on their skills and interests.",
+                ]}
+              />
+            </div>
+          </section>    
         </div>
 
       </div>
