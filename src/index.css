@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Paper and Ink - Typewriter Palette */
+    --background: 45 30% 96%;
+    --foreground: 0 0% 8%;
+
+    --card: 45 25% 94%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 45 30% 96%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 8%;
+    --primary-foreground: 45 30% 96%;
+
+    --secondary: 40 10% 90%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 40 8% 88%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 45 30% 96%;
+
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 0 0% 8%;
+
+    --radius: 0.125rem;
+
+    /* Custom tokens */
+    --ink: 0 0% 8%;
+    --ink-light: 0 0% 25%;
+    --ink-faded: 0 0% 50%;
+    --paper: 45 30% 96%;
+    --paper-dark: 40 20% 92%;
+    --key-bg: 40 10% 94%;
+    --key-shadow: 40 15% 80%;
+    --key-pressed: 40 10% 88%;
+
+    /* Sidebar */
+    --sidebar-background: 40 20% 94%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 0% 8%;
+    --sidebar-primary-foreground: 45 30% 96%;
+    --sidebar-accent: 40 10% 90%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 40 15% 85%;
+    --sidebar-ring: 0 0% 8%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 40 20% 92%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 40 20% 92%;
+    --primary-foreground: 0 0% 6%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 40 15% 85%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 40 20% 92%;
+
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 40 20% 92%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 40 20% 92%;
+
+    --ink: 40 20% 92%;
+    --ink-light: 40 15% 75%;
+    --ink-faded: 40 10% 50%;
+    --paper: 0 0% 6%;
+    --paper-dark: 0 0% 10%;
+    --key-bg: 0 0% 12%;
+    --key-shadow: 0 0% 5%;
+    --key-pressed: 0 0% 18%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 40 15% 85%;
+    --sidebar-primary: 40 20% 92%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 40 20% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono antialiased;
+    font-feature-settings: "liga" 1, "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* Typewriter carriage return line */
+  .carriage-line {
+    @apply relative overflow-hidden;
+  }
+
+  .carriage-line::after {
+    content: '';
+    @apply absolute right-0 top-1/2 -translate-y-1/2 w-0 h-px bg-ink;
+    animation: carriage-return 2s ease-in-out infinite;
+  }
+
+  @keyframes carriage-return {
+    0%, 100% { width: 0; right: 0; }
+    45% { width: 100%; right: 0; }
+    55% { width: 100%; right: 0; }
+    100% { width: 0; right: 100%; }
+  }
+}
+
+@layer components {
+  /* Keyboard Key Button Style */
+  .key {
+    @apply relative inline-flex items-center justify-center px-4 py-2 font-mono text-sm font-medium;
+    @apply bg-key border border-key-shadow rounded-sm;
+    @apply transition-all duration-75 ease-out;
+    box-shadow: 
+      0 2px 0 0 hsl(var(--key-shadow)),
+      0 3px 0 0 hsl(var(--key-shadow) / 0.5),
+      inset 0 1px 0 0 hsl(var(--paper) / 0.5);
+  }
+
+  .key:hover {
+    @apply bg-key-pressed;
+    transform: translateY(1px);
+    box-shadow: 
+      0 1px 0 0 hsl(var(--key-shadow)),
+      0 2px 0 0 hsl(var(--key-shadow) / 0.5),
+      inset 0 1px 0 0 hsl(var(--paper) / 0.5);
+  }
+
+  .key:active, .key.active {
+    @apply bg-key-pressed;
+    transform: translateY(2px);
+    box-shadow: 
+      0 0 0 0 hsl(var(--key-shadow)),
+      0 1px 0 0 hsl(var(--key-shadow) / 0.5),
+      inset 0 1px 2px 0 hsl(var(--ink) / 0.1);
+  }
+
+  /* Typewriter underline effect */
+  .type-link {
+    @apply relative inline-block;
+  }
+
+  .type-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-full h-px bg-ink scale-x-0 origin-left;
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  .type-link:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* Paper texture overlay */
+  .paper-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  /* Blinking caret animation */
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .caret {
+    @apply inline-block w-[2px] h-[1.1em] bg-ink ml-1 align-middle;
+    animation: blink 1s step-end infinite;
+  }
+
+  /* Fade in animation */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
+  }
+
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  /* Code block styling */
+  .code-block {
+    @apply bg-primary text-primary-foreground font-mono text-sm p-4 rounded-sm overflow-x-auto;
+    @apply border border-border;
+  }
+
+  /* Terminal prompt */
+  .terminal-prompt::before {
+    content: '$ ';
+    @apply text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+}
