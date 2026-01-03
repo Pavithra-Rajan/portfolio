@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import beauty from "@/assets/beauty.png";
+import hosting from "@/assets/hosting.jpg";
 interface BlogPost {
   id: string;
   title: string;
@@ -14,6 +15,125 @@ interface BlogPost {
 }
 
 const blogPosts: Record<string, BlogPost> = {
+  "2": {
+    id: "2",
+    title: "How can your localhost:8080 grow up and move out?",
+    date: "2026-01-10",
+    readTime: "7 min",
+    tags: ["Hosting", "Deployment", "DNS"],
+    heroImage: hosting,
+    content: `
+Hosting and deployment sound scary in the same way “filing taxes” and “emotional availability” sound scary. You know they're important, but you'd really like to avoid them for as long as possible. Your app runs perfectly on localhost:8080. It responds instantly. No bugs. No downtime. Life is good. So why on earth do you need to put it “on the internet” where strangers, browsers, DNS servers, and certificate authorities can all mess with it?
+
+I ran into this exact panic in my sophomore year of undergrad when I volunteered to build a website for the Literary and Debating Club at NITC. The site worked. But my seniors couldn't see it. My fellow clubmates couldn't test it. My laptop was the single point of failure. If I shut down my laptop, it's over. That's when I discovered the rabbit hole called hosting and deployment.
+
+Before the [ngrok](https://www.sitepoint.com/use-ngrok-test-local-site/) fans jump me: yes, I know. But I didn't know back then. And honestly, that ignorance forced me to understand the real thing.
+
+So this article is for the sophomore-me, and maybe for you, if you've ever wondered:
+
+> What is hosting? What is deployment? Why does everyone talk about Netlify, DNS, SSL, and why is nothing ever working the first time?
+
+Let's break it down.
+
+## Hosting vs Deployment 
+> Think of your web app like a person. Hosting is the apartment. Deployment is moving your furniture into it and turning on the electricity.
+
+Hosting is the computer (server) on the internet that will run your app (CPU, memory, disk, IP address, networking, uptime, etc.) Deployment is the process of sending your code there, building it, starting it, keeping it running and making it reachable.
+
+You can host something without deploying anything (empty server). You can deploy something without understanding hosting (thanks to Netlify, Heroku, Vercel, etc.). But under the hood, both always co-exist.
+
+## My First Taste: Netlify and Static Websites
+
+In my pre-GPT era with StackOverflow ([RIP](https://eu.36kr.com/en/p/3626348635554823), you deserve the world) and Reddit ([r/webdev](https://www.reddit.com/r/webdev/), [r/webhosting](https://www.reddit.com/r/webhosting/)), Netlify kept popping up. So I tried it. If I had to explain what Netlify does in one sentence, it would be this:
+
+> Give me your GitHub repo and I'll handle the servers, builds, CDN, HTTPS, and magic.
+
+I connected the GitHub repo, set it to auto-build on every push to main, and boom:
+
+[lnd-nitc.netlify.app](https://lnd-nitc.netlify.app) was live. The site was actually live on the internet! That single moment introduced me to three terms I didn't understand back then:
+
+> DNS, CDN and SSL certificates. 
+
+At the time they sounded like Pokémon (thanks to a good friend of mine who explained this to me as well). 
+## Domains: Turning Ugly URLs into Human Names
+
+[lnd-nitc.netlify.app](https://lnd-nitc.netlify.app) is fine.
+[lndnitc.org](https://lndnitc.org) is better.
+
+So I went domain shopping. I checked out GoDaddy, Namecheap, Google Domains (this was before Squarespace absorbed it). After a few Reddit threads and a budget check (₹860 + GST from club funds), I bought the domain from Google Domains.
+
+Now comes the fun part. 
+> “How do I make my domain point to Netlify?” This is where DNS enters the story.
+
+## DNS: The Internet's Phone Book
+
+When someone types lndnitc.org, their computer asks: “Hey DNS, what IP address is this?”
+
+To which DNS responds: “It's actually 104.198.14.52” (or some other Netlify load balancer). Your browser then connects to that IP and gets your website. To make this work, I had to configure: A Records, CNAMEs, point the domain directly to an IP address.
+
+## SSL: Why the Lock Icon Exists
+
+Without SSL, your site loads as http://lndnitc.org. With SSL, it would be https://lndnitc.org.
+
+
+That little lock icon and the additional “s” means that traffic is encrypted and browsers trust the site. Essentially, Chrome doesn't scream “THIS SITE IS DANGEROUS”. The lock certainly means a lot more in terms of security and networking but this is essentially the gist.
+
+Netlify automatically issues certificates using [Let's Encrypt](https://letsencrypt.org/), but only after DNS is correctly configured. This is why things sometimes work… but not securely… for a few hours.
+
+This taught me my first painful lesson:
+
+> DNS is slow. Caches exist. Browsers lie.
+
+So I learned to use: dig, nslookup, traceroute, wget to check reality instead of just vibes.
+
+## Subdomains: bookclub.lndnitc.org
+
+A few months later, I ended up developing a website for one of our club ventures, “The bookclub” [[bookclub.lndnitc.org]](https://bookclub.lndnitc.org). This is when I learnt about subdomains and co-domains. I ended up hosting this new website as a subdomain. Essentially, subdomains are like folders in the internet's filing cabinet. 
+
+## Backend Hosting: Heroku and Real Servers
+
+In my junior year, one of my good friends in the club , [Joel Mathew](https://www.linkedin.com/in/joelmathewc/) developed Covilink, a full-stack app with a frontend, backend, and a database. Netlify handled the frontend beautifully. But sadly, APIs don't live on vibes and HTML, they need a server that keeps running.
+
+That's where I met Heroku (again, thanks to reddit) Heroku gives you a Linux server, a public URL, a way to deploy code and a database.
+
+I deployed the backend there and added some DNS records. As one would expect from someone who went with vibes in this process, I promptly broke everything while editing DNS.
+
+Nothing resolved. Nothing loaded. Panic. I did eventually figure the issue out but it did take me 2 days, a bunch of stackoverflow pages, heroku and google domains documentation to restore things. 
+
+## Professional Reality: On-Prem and Cloud
+
+At D. E. Shaw, I learned what Netlify and Heroku hide. Racks of servers, load balancers, reverse proxies, firewalls, blue-green deployments and most importantly observability and monitoring. In the two years, I learnt a lot of intricacies related to on-prem application deployment, releases and most importantly debugging issues post that. 
+
+Then at NYU, I enrolled in the cloud computing course in my first semester where I was exposed to S3 for static hosting, CloudFront as CDN, API Gateway + Lambda for backends. 
+
+Same ideas. Just more knobs.
+
+## The 2026 Plot Twist: Squarespace + Netlify
+
+Fast-forward to last week, I decided to revive my portfolio (which, you are currently on) after four years. Google Domains had quietly shapeshifted into Squarespace. Netlify had redesigned its UI. My mental model, however, was still stuck in 2021.
+
+The symptom was deceptively simple. www.pavithra.dev worked but pavithra.dev did not resolve. Which is sort of like being searchable on LinkedIn by your handle, but completely invisible when someone types your actual name.
+
+After a full day of going through Netlify documentation, personal rants with ChatGPT, and my own poor life choices, I finally found the bug. I had forgotten to add Netlify's load balancer IP on Squarespace and I hadn't pointed the domain's nameservers to Netlify. A random YouTube video with 60 views, uploaded a month ago by a hero with zero SEO, saved me.
+
+A few hours later, the TLS certificate was issued, HTTPS lit up, and the internet finally agreed that pavithra.dev was, in fact, my website.
+
+## The Real Lesson
+
+Hosting and deployment are like learning to drive:
+
+You can use Uber (Netlify, Vercel, Heroku) or you can drive stick (AWS, bare metal, Kubernetes), but either way, you must understand:
+
+> DNS, HTTPS, servers, how the internet finds your app
+
+Because if you don't, one day you will break DNS and take your entire application offline.
+
+If this helped you even half as much as those 2-minute YouTube videos helped me, I'm happy.
+
+Now go deploy your app. localhost deserves to see the world. 
+
+`
+  },
   "1": {
     id: "1",
     title: "Beauty lies in the AI of the beholder",

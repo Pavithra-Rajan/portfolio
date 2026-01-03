@@ -12,6 +12,14 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: "2",
+    title: "How can your localhost:8080 grow up and move out?",
+    excerpt: "Hosting and deployment sound scary in the same way “filing taxes” and “emotional availability” sound scary. You know they're important, but you'd really like to avoid them for as long as...",
+    date: "2026-01-10",
+    readTime: "7 min",
+    tags: ["Hosting", "Deployment", "DNS"],
+  },
+  {
     id: "1",
     title: "Beauty lies in the AI of the beholder",
     excerpt: "Well, well, well. Looks like we've reached a new level of society's obsession with rating our looks. Now, not only do we have to deal with humans judging us, but machines too!",
