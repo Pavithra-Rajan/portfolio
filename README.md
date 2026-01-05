@@ -5,6 +5,7 @@
 ![Netlify](https://img.shields.io/badge/Deployed_on-Netlify-00C7B7?logo=netlify\&logoColor=white)
 ![Squarespace](https://img.shields.io/badge/Hosted_via-Squarespace-000000?logo=squarespace\&logoColor=white)
 ![Lovable](https://img.shields.io/badge/Bootstrapped_with-Lovable-7C3AED)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f5b9b733-ed9e-4c97-8622-a3a625c7c931/deploy-status)](https://app.netlify.com/sites/pavithra-dev/deploys)
 
 This is my revamped personal portfolio website showcasing my technical writing, visual art, musings, projects, and professional journey.
 The initial structure was generated using **Lovable**, while all content, design refinements, and major architectural changes are my own.
