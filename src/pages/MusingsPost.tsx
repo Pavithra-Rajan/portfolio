@@ -12,6 +12,7 @@ import csea from "@/assets/caching_memories/memory9.jpg";
 import fossmeet from "@/assets/caching_memories/memory10.jpg";
 import pizzastack from "@/assets/caching_memories/memory12.jpg";
 import nitc_end from "@/assets/caching_memories/memory2.jpg";
+import handwriting from "@/assets/handwriting.png";
 const imageMap: Record<string, string> = {
   nitc,
   timezone,
@@ -37,8 +38,23 @@ interface MusingPost {
 }
 
 const musingPosts: Record<string, MusingPost> = {
-  "1": {
+        "1": {
     id: "1",
+    title: "The traces between lines",
+    date: "2025-05-22",
+    readTime: "4 min",
+    tags:  ["symbolism", "prose", "thoughts"],
+    heroImage: handwriting,
+    content: `
+> This piece was used for the NYU Wasserman Presentation Competition 2025 where I won first place.
+  
+  The other day, I was penning down notes from a meeting to ensure that I captured all the details so as to not forget things the way I always do. My colleague stopped by later, seeing these notes on my table, and complimented how my handwriting looks like it came out of a typewriter but still somehow feels human. That one small comment transported me straight back to middle school and high school, where teachers would always praise my handwriting, whether it was English, Hindi, or even Arabic. Well, that's why I did get the best handwriting prize in Grade 7, after all. But that's enough of the flex. This got me thinking about how we were all handed the same notebook once in kindergarten. The half-inch separated wide lines with red margins and faint gray letters waiting to be traced. That's how we were taught the alphabet, and more importantly, how to write, merely by imitation. Everyone in the room was learning how to curl the G, loop an O, and shape a W. Learning the right way to write while perhaps holding the pen wrong. I always did and still do. That's probably why, years later, I have a stubborn callus on my middle finger, which, anatomically speaking, was never meant to bear that kind of pressure. It's wild how, given a language, we all learn the same letters, trace the same lines with the same block templates, and yet no two handwritings ever turn out the same.
+  I think about grip a lot. Not just how we hold a pen, but how some things grip onto us. Habits, memories, people. We don't always get to choose what leaves a mark. I used to press the pen so hard when I wrote that the text would leave prints on the next page. Even if you tore out the one with the words, the shadow stayed behind. It was stubborn, kind of like me. And maybe we're all like that, marked by the people who've passed through us. Some leave only a trace, barely there. Others sink in deep, changing the way we write ourselves from that point on. We tend to overwrite. We get overwritten. And every so often, we try to erase the mess and start again. But those blue erasers we all carried in school, the ones meant to erase ink but only ever smudged it, taught us that some things never truly disappear. But perhaps, even though the page still carries those traces, you can always write something on top.
+  My handwriting doesn't look the way it used to. It used to be rounder, more cursive. Over time, the letters straightened out, the loops tightened, and the slant shifted. Some parts got sharper, some lazier. And yet, no matter how much it's changed, the grip remained the same. There's a rhythm in the way I dot my i's, a certain impatience in the way I end my words, like I'm already thinking about the next one. It's strange how something as simple as handwriting can hold a whole archive of who we've been, how we've softened, hardened, sped up, or even slowed down. It keeps evolving, but something in it always stays. A pulse, a pattern, and somewhere in all of it, the trace of that kid tracing letters on a lined paper still exists.
+          `
+  },
+  "2": {
+    id: "2",
     title: "Time Zones",
     date: "2025-01-01",
     readTime: "3 min",
@@ -51,8 +67,8 @@ const musingPosts: Record<string, MusingPost> = {
     It is easy to think that the beginning of something new must be flawless and that we must embark on a clean slate, free from mistakes and imperfections. But perhaps the beauty of growth lies perfectly in these imperfections. The missteps, the false starts, and the moments when we stumble are the moments that shape us, offering lessons that a perfect beginning could never provide. And maybe, as we leap ahead in time, crossing time zones on a flight, or turning back the clock to reflect where we have been, we could embrace the uneven rhythm of our journey. It is in these contrasts that time reveals its deepest meaning, not as a straight line, much like the jagged boundaries of time zones, but as a tapestry of reflection and transformation.
     `
   },
-    "2": {
-    id: "2",
+    "3": {
+    id: "3",
     title: "The Un-Thrown Trash",
     date: "2023-05-15",
     readTime: "2 min",
@@ -68,8 +84,8 @@ There's something symbolic about trash, letting go of what we no longer need and
 Fast forward to adulthood, to my rented flat, where the evenings are much quieter. My flatmate and I, busy with work and life, often forget the little things, like looking after ourselves and, most importantly, throwing out the trash. More than once, we've come home to that familiar smell, both of us looking sheepish, reminded of the routines we've neglected. It's funny how life circles back. The simple task that my mom enforced with such rigidity now feels like a lifeline back to that warm kitchen, the clatter of pots, and the hum of my parents' quiet chatter. In such moments, I am back home in that small kitchen with that bright 20W tube light, realizing how my parents taught me not just how to take care of a home but how to take care of life.
 `
   },
-  "3": {
-    id: "3",
+  "4": {
+    id: "4",
     title: "Cache-ing Memories",
     date: "2023-05-22",
     readTime: "12 min",
@@ -163,7 +179,7 @@ As I bring these four transformative years to a close, reflecting on this incred
 
 ![Fin](nitc_end)
 `
-  }
+  },
 
 };
 
