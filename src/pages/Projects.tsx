@@ -12,6 +12,22 @@ interface Project {
 const projects: Project[] = [
   {
     id: "1",
+    title: "Align",
+    description: "An AI powered job search platform by leveraging high-performance vector search and reasoning with Claude to connect candidates with the most relevant roles based on their resumes.",
+    techStack: ["React", "AWS Lambda", "AWS Bedrock", "Python", "AOSS"],
+    outcome: "Developed as part of a take-home assessment",
+    link: "https://github.com/Pavithra-Rajan/align"
+  },
+    {
+    id: "2",
+    title: "Weekwise",
+    description: "An AI assistant powered by Claude API to derive insights from the syllabus and generate a weekwise plan for the semester with important deadlines and events highlighted.",
+    techStack: ["React", "FastAPI", "Claude API", "Google Calendar API"],
+    outcome: "Developed as part of EmpireHacks 2025, Cornell Tech, NYC",
+    link: "https://github.com/Pavithra-Rajan/weekwise"
+  },
+  {
+    id: "3",
     title: "Zone",
     description: "An Agentic event scheduler powered by Gemini and Google Cal API to plan your day effectively with time blockings",
     techStack: ["React", "FastAPI", "Gemini API", "Google Calendar API"],
@@ -19,7 +35,7 @@ const projects: Project[] = [
     link: "https://github.com/Pavithra-Rajan/zone"
   },
   {
-    id: "2",
+    id: "4",
     title: "VulCAN: Vulnerability Code Analyser",
     description: "A scalable code vulnerability analyser for GitHub repositories hosted on AWS",
     techStack: ["JavaScript", "AWS Fargate", "SQS", "SES", "S3", "RDS", "Flask", "Semgrep"],
@@ -27,7 +43,7 @@ const projects: Project[] = [
     link: "https://github.com/NYU-Cloud/Vulnerability-Detector"
   },
     {
-    id: "3",
+    id: "5",
     title: "VSAT link encryption PoC",
     description: "A PoC to indicate the relevance of E2E and Digital signatures in VSAT links to ensure confidentiality and integrity of data",
     techStack: ["virsh", "networking", "FastAPI", "mitmproxy"],
@@ -35,7 +51,7 @@ const projects: Project[] = [
     link: "https://github.com/Pavithra-Rajan/CS-GY-G6813-VSAT-Link-Encryption"
   },
   {
-    id: "4",
+    id: "6",
     title: "swimiNIT",
     description: "A mobile app to manage NITC\'s swimming pool users and employees following SDLC principles and Agile methodology",
     techStack: ["Flutter", "Firebase", "SDLC"],
@@ -43,7 +59,7 @@ const projects: Project[] = [
     link: "https://github.com/Pavithra-Rajan/swimiNIT"
   },
   {
-    id: "5",
+    id: "7",
     title: "AWS EKS Deployment Pipeline",
     description: "A persistent To-Do application deployed on AWS EKS with CI/CD pipeline and monitoring",
     techStack: ["EKS", "Docker", "Prometheus"],
@@ -51,7 +67,7 @@ const projects: Project[] = [
     link: "https://github.com/Pavithra-Rajan/EKS-Deployment"
   },
     {
-    id: "6",
+    id: "8",
     title: "Consumer Buying Behavior Prediction",
     description: "A web application that predicts consumer buying behavior using machine learning algorithms",
     techStack: ["Python", "EDA", "XGB", "FastAPI", "ReactJS"],
@@ -59,7 +75,7 @@ const projects: Project[] = [
     link: "https://github.com/LearningRate-0"
   },
   {
-    id: "7",
+    id: "9",
     title: "Dining Concierge Chatbot",
     description: "A web-based interactive dining concierge chatbot using Amazon Lex powered with Yelp API integration",
     techStack: ["AWS Lex", "Lambda", "SQS", "SES", "DynamoDB", "API Gateway", "AWS OpenSearch"],
@@ -67,7 +83,7 @@ const projects: Project[] = [
     link: "https://github.com/Pavithra-Rajan/Dining-Concierge-Chatbot"
   },
   {
-    id: "8",
+    id: "10",
     title: "Intelligent Photo Album Organizer",
     description: "A photo album organizer that categorizes and tags images using AWS Rekognition and stores it into S3 with metadata on OpenSearch",
     techStack: ["AWS OpenSearch", "Rekognition", "CloudFormation", "AWS Lex", "Lambda", "S3"],
@@ -75,7 +91,7 @@ const projects: Project[] = [
     link: "https://github.com/Pavithra-Rajan/CS-GY-9223-Cloud-Assg3-Album"
   },
   {
-    id: "9",
+    id: "11",
     title: "Cache Performance Evaluation and Parallelism Analysis",
     description: "Analyzed cache performance by comparing hit time, miss rate, and AMAT while varying L1 and L2 cache sizes.",
     techStack: ["Python", "gem5 simulator", "C", "CUDA"],
@@ -83,7 +99,7 @@ const projects: Project[] = [
     link: "https://github.com/Pavithra-Rajan/Computer-Architecture"
   },
   {
-    id: "10",
+    id: "12",
     title: "Expense Tracker App",
     description: "A web application to track personal expenses with features like adding, editing, deleting expenses, and visualizing spending patterns. Conducted stress testing with JMeter.",
     techStack: ["HTML", "CSS", "JavaScript", "JMeter"],
