@@ -158,7 +158,7 @@ export default function Resume() {
 
           <section>
             <h2 className="text-sm font-mono font-medium uppercase tracking-wider mb-4 pb-2 border-b border-border">
-              Hackathons
+              Hackathon Wins
             </h2>
             <div className="space-y-4">
               <ResumeEntry

@@ -12,6 +12,19 @@ interface WorkExperience {
 const experiences: WorkExperience[] = [
   {
     id: "1",
+    company: "NYU IT, Enterprise Data Solutions & Governance",
+    role: "Software Engineer Intern",
+    period: "Jan 2026 — Present",
+    description: "",
+    highlights: [
+      "Deployed new features for the NYU IT Data Portal, enhancing data accessibility and user experience across enterprise systems.",
+      "Managed and optimized large-scale SQL databases (30M+ rows).",
+      "Performed data validation and integrity checks, ensuring accuracy and consistency across ETL pipelines.",
+      "Collaborated with cross-functional teams to troubleshoot data pipeline issues and ensuring reliability.",
+    ],
+  },
+  {
+    id: "2",
     company: "D. E. Shaw & Co",
     role: "Senior Member, Tech",
     period: "Jan 2025 — Jul 2025",
@@ -22,7 +35,7 @@ const experiences: WorkExperience[] = [
     ],
   },
   {
-    id: "2",
+    id: "3",
     company: "D. E. Shaw & Co",
     role: "Member Tech",
     period: "Jul 2023 — Dec 2024",
@@ -35,7 +48,7 @@ const experiences: WorkExperience[] = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     company: "D. E. Shaw & Co",
     role: "System Engineering Intern",
     period: "May 2022 — Jul 2022",
