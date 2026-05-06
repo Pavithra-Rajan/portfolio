@@ -9,46 +9,48 @@ interface Project {
   link?: string;
 }
 
+// Append new projects to the end of this array with the next sequential id.
+// The render reverses the list so the most recently added entry appears first.
 const projects: Project[] = [
   {
     id: "1",
-    title: "Align",
-    description: "An AI powered job search platform by leveraging high-performance vector search and reasoning with Claude to connect candidates with the most relevant roles based on their resumes.",
-    techStack: ["React", "AWS Lambda", "AWS Bedrock", "Python", "AOSS"],
-    outcome: "Developed as part of a take-home assessment",
-    link: "https://github.com/Pavithra-Rajan/align"
+    title: "Expense Tracker App",
+    description: "A web application to track personal expenses with features like adding, editing, deleting expenses, and visualizing spending patterns. Conducted stress testing with JMeter.",
+    techStack: ["HTML", "CSS", "JavaScript", "JMeter"],
+    outcome: "As part of NITC Web Design and Programming Course Project, S8 2023",
+    link: "https://github.com/Pavithra-Rajan/Expense-Tracker-App"
   },
-    {
+  {
     id: "2",
-    title: "Weekwise",
-    description: "An AI assistant powered by Claude API to derive insights from the syllabus and generate a weekwise plan for the semester with important deadlines and events highlighted.",
-    techStack: ["React", "FastAPI", "Claude API", "Google Calendar API"],
-    outcome: "Developed as part of EmpireHacks 2025, Cornell Tech, NYC",
-    link: "https://github.com/Pavithra-Rajan/weekwise"
+    title: "Cache Performance Evaluation and Parallelism Analysis",
+    description: "Analyzed cache performance by comparing hit time, miss rate, and AMAT while varying L1 and L2 cache sizes.",
+    techStack: ["Python", "gem5 simulator", "C", "CUDA"],
+    outcome: "As part of NITC Computer Architecture Course Project, S8 2023",
+    link: "https://github.com/Pavithra-Rajan/Computer-Architecture"
   },
   {
     id: "3",
-    title: "Zone",
-    description: "An Agentic event scheduler powered by Gemini and Google Cal API to plan your day effectively with time blockings",
-    techStack: ["React", "FastAPI", "Gemini API", "Google Calendar API"],
-    outcome: "Developed as part of ODSC 2025 Hackathon, NYC",
-    link: "https://github.com/Pavithra-Rajan/zone"
+    title: "Intelligent Photo Album Organizer",
+    description: "A photo album organizer that categorizes and tags images using AWS Rekognition and stores it into S3 with metadata on OpenSearch",
+    techStack: ["AWS OpenSearch", "Rekognition", "CloudFormation", "AWS Lex", "Lambda", "S3"],
+    outcome: "As part of NYU Cloud Computing Course Assignment 3, Fall 2025",
+    link: "https://github.com/Pavithra-Rajan/CS-GY-9223-Cloud-Assg3-Album"
   },
   {
     id: "4",
-    title: "VulCAN: Vulnerability Code Analyser",
-    description: "A scalable code vulnerability analyser for GitHub repositories hosted on AWS",
-    techStack: ["JavaScript", "AWS Fargate", "SQS", "SES", "S3", "RDS", "Flask", "Semgrep"],
-    outcome: "As part of NYU Cloud Computing Course Project, Fall 2025",
-    link: "https://github.com/NYU-Cloud/Vulnerability-Detector"
+    title: "Dining Concierge Chatbot",
+    description: "A web-based interactive dining concierge chatbot using Amazon Lex powered with Yelp API integration",
+    techStack: ["AWS Lex", "Lambda", "SQS", "SES", "DynamoDB", "API Gateway", "AWS OpenSearch"],
+    outcome: "As part of NYU Cloud Computing Course Assignment 1, Fall 2025",
+    link: "https://github.com/Pavithra-Rajan/Dining-Concierge-Chatbot"
   },
-    {
+  {
     id: "5",
-    title: "VSAT link encryption PoC",
-    description: "A PoC to indicate the relevance of E2E and Digital signatures in VSAT links to ensure confidentiality and integrity of data",
-    techStack: ["virsh", "networking", "FastAPI", "mitmproxy"],
-    outcome: "As part of NYU Information Security and Privacy Course Project, Fall 2025",
-    link: "https://github.com/Pavithra-Rajan/CS-GY-G6813-VSAT-Link-Encryption"
+    title: "Consumer Buying Behavior Prediction",
+    description: "A web application that predicts consumer buying behavior using machine learning algorithms",
+    techStack: ["Python", "EDA", "XGB", "FastAPI", "ReactJS"],
+    outcome: "Developed as part of NITCkathon 2023, First Runner Up",
+    link: "https://github.com/LearningRate-0"
   },
   {
     id: "6",
@@ -66,45 +68,69 @@ const projects: Project[] = [
     outcome: "As part of NYU Cloud Computing Course Assignment 2, Fall 2025",
     link: "https://github.com/Pavithra-Rajan/EKS-Deployment"
   },
-    {
+  {
     id: "8",
-    title: "Consumer Buying Behavior Prediction",
-    description: "A web application that predicts consumer buying behavior using machine learning algorithms",
-    techStack: ["Python", "EDA", "XGB", "FastAPI", "ReactJS"],
-    outcome: "Developed as part of NITCkathon 2023, First Runner Up",
-    link: "https://github.com/LearningRate-0"
+    title: "VSAT link encryption PoC",
+    description: "A PoC to indicate the relevance of E2E and Digital signatures in VSAT links to ensure confidentiality and integrity of data",
+    techStack: ["virsh", "networking", "FastAPI", "mitmproxy"],
+    outcome: "As part of NYU Information Security and Privacy Course Project, Fall 2025",
+    link: "https://github.com/Pavithra-Rajan/CS-GY-G6813-VSAT-Link-Encryption"
   },
   {
     id: "9",
-    title: "Dining Concierge Chatbot",
-    description: "A web-based interactive dining concierge chatbot using Amazon Lex powered with Yelp API integration",
-    techStack: ["AWS Lex", "Lambda", "SQS", "SES", "DynamoDB", "API Gateway", "AWS OpenSearch"],
-    outcome: "As part of NYU Cloud Computing Course Assignment 1, Fall 2025",
-    link: "https://github.com/Pavithra-Rajan/Dining-Concierge-Chatbot"
+    title: "VulCAN: Vulnerability Code Analyser",
+    description: "A scalable code vulnerability analyser for GitHub repositories hosted on AWS",
+    techStack: ["JavaScript", "AWS Fargate", "SQS", "SES", "S3", "RDS", "Flask", "Semgrep"],
+    outcome: "As part of NYU Cloud Computing Course Project, Fall 2025",
+    link: "https://github.com/NYU-Cloud/Vulnerability-Detector"
   },
   {
     id: "10",
-    title: "Intelligent Photo Album Organizer",
-    description: "A photo album organizer that categorizes and tags images using AWS Rekognition and stores it into S3 with metadata on OpenSearch",
-    techStack: ["AWS OpenSearch", "Rekognition", "CloudFormation", "AWS Lex", "Lambda", "S3"],
-    outcome: "As part of NYU Cloud Computing Course Assignment 3, Fall 2025",
-    link: "https://github.com/Pavithra-Rajan/CS-GY-9223-Cloud-Assg3-Album"
+    title: "Zone",
+    description: "An Agentic event scheduler powered by Gemini and Google Cal API to plan your day effectively with time blockings",
+    techStack: ["React", "FastAPI", "Gemini API", "Google Calendar API"],
+    outcome: "Developed as part of ODSC 2025 Hackathon, NYC",
+    link: "https://github.com/Pavithra-Rajan/zone"
   },
   {
     id: "11",
-    title: "Cache Performance Evaluation and Parallelism Analysis",
-    description: "Analyzed cache performance by comparing hit time, miss rate, and AMAT while varying L1 and L2 cache sizes.",
-    techStack: ["Python", "gem5 simulator", "C", "CUDA"],
-    outcome: "As part of NITC Computer Architecture Course Project, S8 2023",
-    link: "https://github.com/Pavithra-Rajan/Computer-Architecture"
+    title: "Weekwise",
+    description: "An AI assistant powered by Claude API to derive insights from the syllabus and generate a weekwise plan for the semester with important deadlines and events highlighted.",
+    techStack: ["React", "FastAPI", "Claude API", "Google Calendar API"],
+    outcome: "Developed as part of EmpireHacks 2025, Cornell Tech, NYC",
+    link: "https://github.com/Pavithra-Rajan/weekwise"
   },
   {
     id: "12",
-    title: "Expense Tracker App",
-    description: "A web application to track personal expenses with features like adding, editing, deleting expenses, and visualizing spending patterns. Conducted stress testing with JMeter.",
-    techStack: ["HTML", "CSS", "JavaScript", "JMeter"],
-    outcome: "As part of NITC Web Design and Programming Course Project, S8 2023",
-    link: "https://github.com/Pavithra-Rajan/Expense-Tracker-App"
+    title: "Align",
+    description: "An AI powered job search platform by leveraging high-performance vector search and reasoning with Claude to connect candidates with the most relevant roles based on their resumes.",
+    techStack: ["React", "AWS Lambda", "AWS Bedrock", "Python", "AOSS"],
+    outcome: "Developed as part of a take-home assessment",
+    link: "https://github.com/Pavithra-Rajan/align"
+  },
+  {
+    id: "13",
+    title: "snickr",
+    description: "A Slack-style team-collaboration app built end-to-end on PostgreSQL with workspaces, channels, access-controlled search, and live typing indicators.",
+    techStack: ["PostgreSQL", "React", "FastAPI"],
+    outcome: "Final project for CS-GY 6083 Principles of Database Systems, NYU, Spring 2026",
+    link: "https://github.com/Pavithra-Rajan/snickr"
+  },
+  {
+    id: "14",
+    title: "svg-lm-scaling",
+    description: "A study of scaling laws for decoder-only Transformer LMs trained on Scalable Vector Graphics, fitting curves under SP and mup across five GPT-style architectures from 853K to 85.3M parameters.",
+    techStack: ["PyTorch", "Transformers", "BPE", "mup"],
+    outcome: "Research project for CS-GY 6923 Machine Learning, NYU, Spring 2026",
+    link: "https://github.com/Pavithra-Rajan/svg-lm-scaling"
+  },
+  {
+    id: "15",
+    title: "Tunnel Vision",
+    description: "An NYC subway activity visualiser that aggregates live train status by borough and correlates it with historical weather and ridership. Per-borough Prophet models predict next-hour ridership on live weather.",
+    techStack: ["FastAPI", "React", "Apache Spark", "Apache Kafka"],
+    outcome: "As part of NYU Big Data Course Project, Spring 2026",
+    link: "https://github.com/CS-GY-6513-Project/Tunnel-Vision"
   },
 ];
 
@@ -126,7 +152,7 @@ export default function Projects() {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
+          {[...projects].reverse().map((project, index) => (
             <article
               key={project.id}
               className="group p-6 border border-border bg-card hover:bg-accent/50 transition-colors opacity-0 animate-fade-in-up"
