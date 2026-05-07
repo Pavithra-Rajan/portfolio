@@ -91,6 +91,13 @@ export default function Resume() {
             </h5>
             <div className="space-y-6">
               <ResumeEntry
+                title="Engineering Intern"
+                organization="Decimal AI, Inc."
+                period="May 2026 — Present"
+                items={[
+                ]}
+              />
+              <ResumeEntry
                 title="Senior Member, Tech"
                 organization="D. E. Shaw & Co"
                 period="Jan 2025 — Jul 2025"

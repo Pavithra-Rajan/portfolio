@@ -11,6 +11,17 @@ interface WorkExperience {
 
 const experiences: WorkExperience[] = [
   {
+    id: "0",
+    company: "Decimal AI, Inc.",
+    role: "Engineering Intern",
+    period: "May 2026 — Present",
+    description: "",
+    highlights: [
+      "Building AI agent infrastructure (retrieval, reasoning, execution) and backend APIs powering ticket analysis, code search, and traceable AI-generated responses over live customer codebases.",
+      "Serving 12+ enterprises processing 30K+ support tickets per month.",
+    ],
+  },
+  {
     id: "1",
     company: "NYU IT, Enterprise Data Solutions & Governance",
     role: "Software Engineer Intern",
