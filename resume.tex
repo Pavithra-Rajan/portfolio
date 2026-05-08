@@ -1,0 +1,310 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{csquotes}
+
+%----------FONT OPTIONS----------
+% sans-serif
+%\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textheight}{1.8in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \text{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{{\Huge \scshape Pavithra Rajan}} \\ \vspace{2pt}
+
+    \small {\raisebox{-0.2\height}\faEnvelope\  \underline{pavithra.rajan01@gmail.com}} ~ 
+    \href{https://linkedin.com/in/pavithra--rajan/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/pavithra--rajan/}} \hspace{3pt} 
+    \raisebox{-0.1\height}\faPhone\ (+1) (347)200-5103 ~ 
+    \href{https://github.com/Pavithra-Rajan} {\raisebox{-0.2\height}\faGithub\ \underline{Pavithra-Rajan}}
+    \vspace{-3pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {New York University}{August 2025 -- May 2027}
+      {Master of Science in Computer Science, \textbf{CGPA: 4.00/4.00}}{Brooklyn, New York}
+      \vspace{-2pt}
+    \resumeSubheading
+      {National Institute of Technology, Calicut}{July 2019 -- May 2023}
+      {Bachelor of Technology in Computer Science and Engineering, \textbf{CGPA: 3.82/4.00}}{Kerala, India}
+      \resumeItemListStart
+      \resumeItem{\textbf{Secretary}, Computer Science \& Engineering Association and Literary \& Debating Club; Lead Coordinator, \textbf{FOSSMeet} 2023.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  \vspace{-18pt}
+    %-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Golang, Bash, C++/C} \\
+     \textbf{Administration}{: Enterprise GitHub, ELK Stack, Linux, GPFS} \\
+     \textbf{Technologies/Frameworks}{: Puppet, ReactJS, Flutter, Grafana, Prometheus, FastAPI, HashiCorp Vault, AWS (RDS, DynamoDB, EC2, Lambda, Lex, SQS, EKS, CloudFormation), Docker, Semgrep, Tableau} \\
+    }}
+ \end{itemize}
+ \vspace{-20pt}
+% %------RELEVANT COURSEWORK-------
+% \section{Relevant Coursework}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item\small Data Structures
+%                 \item Software Methodology
+%                 \item Algorithms Analysis
+%                 \item Database Management
+%                 \item Artificial Intelligence
+%                 \item Internet Technology
+%                 \item Systems Programming
+%                 \item Computer Architecture
+%             \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+
+% %-----------EXPERIENCE-----------
+% \vspace{-30pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {Decimal AI, Inc.}{May 2026 -- Present}
+      {Engineering Intern}{San Mateo, California, United States}
+      \resumeItemListStart
+        \resumeItem{Building AI agent infrastructure (retrieval, reasoning, execution) and backend APIs powering ticket analysis, code search, and traceable AI-generated responses over live customer codebases, serving \textbf{12+ enterprises} processing \textbf{30K+} support tickets per month.}
+    \resumeItemListEnd
+     \resumeSubheading
+      {NYU IT: Enterprise Data Services Group}{Jan 2026 -- Present}
+      {Software Engineer Intern}{New York City, United States}
+      \resumeItemListStart
+        \resumeItem{Developing and maintaining NYU's Business Intelligence portal by resolving critical bugs and optimizing backend APIs.}
+    \resumeItemListEnd
+\vspace{-12pt}
+    \resumeSubheading
+      {D.E Shaw \& Co., Site Reliability Engineering - Linux}{July 2023 -- July 2025}
+      % {Senior Member Technical (Jan 2024 -- Present) \\ Member Technical, Site Reliability Engineering - Linux (July 2023 -- Dec 2023) \\ } 
+      {
+Senior Member, Tech (Jan 2025 -- July 2025) | Member, Tech (July 2023 -- Dec 2024)}{Hyderabad, India}
+      \resumeItemListStart
+       \resumeItem{Administered \textbf{6,000+} \textbf{RHEL} servers with privileged root access. Executed releases across \textbf{300+ infrastructure servers} and independently led RHEL7 to RHEL8 migration for provisioning, SFTP, and utility servers.}
+    \resumeItem{Managed a \textbf{900TB} \textbf{ELK} production cluster as one of five administrators. Collaborated on migration from SearchGuard to Elastic Security by developing  scripts and implementing critical configuration changes. Improved cluster storage efficiency by \textbf{12\% }through \textbf{GPFS} snapshotting and automated offline snapshot workflows.}
+    \resumeItem{Spearheaded \textbf{GitHub Enterprise Server} operations as one of three global administrators, supporting \textbf{1,600+} \textbf{repositories} and\textbf{ 2,000+ users}. Deployed infrastructure for Dependabot and GitHub Actions runners.}
+        
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {D.E Shaw \& Co.}{May 2022 -- July 2022}
+      {Systems Engineering Intern}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItem{Designed and developed a \textbf{Certificate Manager} to manage the lifecycle of X.509 certificates for the firm’s internal websites and services. Reduced operational toil of SRE engineers in the firm by approximately \textbf{35 hours} each month.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-18pt}
+
+\section{Publications}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Proof-of-Variable-Authority: A Blockchain Consensus Mechanism for Securing IoT Networks} $|$ \emph{\href{https://link.springer.com/chapter/10.1007/978-3-031-49099-6_24}{\textcolor{blue}{LNCS, Springer}}} \faLink}{}
+          \resumeItemListStart
+            \resumeItem{Designed a \textbf{custom blockchain consensus mechanism} with a robust \textbf{PKI system} to secure IoT networks, enabling seamless \textbf{device authentication} through device certificates; built an end-to-end \textbf{PoC}.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+\vspace{-10pt}
+%-----------PROJECTS-----------
+\section{Select Projects}
+\vspace{-4pt}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Pavithra-Rajan/zone}{Zone} \faGithub}
+$|$ \emph{FastAPI, React, Gemini}}{Dec 2025}
+\resumeItemListStart
+    \resumeItem{Owned end-to-end delivery of an AI-powered scheduler using Gemini Flash 2.5 to translate natural-language tasks into optimized Google Calendar time blocks for the \textbf{ODSC AI Hackathon}; defined APIs, architecture, and prompt workflows across frontend and backend.}
+\resumeItemListEnd
+\vspace{-15pt}
+% --- Project 1 ---
+\resumeProjectHeading
+{\textbf{\href{}{VulCAN} \faGithub}
+$|$ \emph{JavaScript, AWS Fargate, SQS, SES, S3, RDS, Flask, Semgrep}}{Oct 2025}
+\resumeItemListStart
+    \resumeItem{Built a scalable, asynchronous \textbf{vulnerability scanning platform} for on-demand analysis of GitHub repositories; integrated Semgrep for detection, classification, and historical tracking, with \textbf{contextual AI suggestions} and recommended fixes for detected snippets.}
+\resumeItemListEnd
+\vspace{-15pt}
+
+% --- Project 2 ---
+% \resumeProjectHeading
+% {\textbf{\href{https://github.com/Pavithra-Rajan/Computer-Architecture}{Cache Performance Evaluation and Parallelism Analysis} \faGithub} 
+% $|$ \emph{Python, gem5, C, CUDA}}{Mar 2023}
+% \resumeItemListStart
+%     \resumeItem{Evaluated cache performance (hit time, miss rate, AMAT) by varying L1/L2 configurations using SPEC CPU workloads on gem5.}
+%     \resumeItem{Benchmarked pthreads, OpenMP, and CUDA parallel models to compare data and thread-level parallelism impacts on execution efficiency.}
+% \resumeItemListEnd
+% \vspace{-15pt}
+
+% --- Project 3 ---
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Pavithra-Rajan/swimiNIT}{swimiNIT} \faGithub}
+$|$ \emph{Flutter}}{Apr 2022}
+\resumeItemListStart
+    \resumeItem{Developed a mobile app to manage NITC's swimming pool users and employees following \textbf{SDLC principles}; authored feasibility, SRS, design, and test documentation.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------INVOLVEMENT---------------
+% \section{Leadership / Extracurricular}
+    
+%             \resumeItemListStart
+%                 \resumeItem{\textbf{Secretary, Computer Science and Engineering Association} (May 2022 – May 2023): Led the organization of hackathons and tech-talks, fostered mentorship initiatives, and contributed articles to the department magazine.}
+%                 \vspace{-2pt}
+
+%                 \resumeItem{\textbf{Secretary, Literary and Debating Club} (Aug 2021 – Oct 2022): Organized literary activities at the institute and facilitated a partnership between the club and Kanal, an NGO based in Kerala, to empower underprivileged school students by enhancing their reading abilities.}
+                
+%                 \vspace{-2pt}
+%                 \resumeItem{\textbf{Lead Coordinator, FOSSMeet 2023 at NITC} (March 2023): Led a team to successfully coordinate the event, fostering collaboration and innovation in the Free and Open Source Software community.}
+                
+%                 \vspace{-2pt}
+%                 \resumeItem{\textbf{NITCAMP 2023-2024 Mentor}: Mentored a student for 8 months in developing programming and development skills to prepare them for interviews, as part of the NITC Alumni Association initiative.}
+%                 \vspace{-2pt}
+                
+%                 \resumeItem{\textbf{Hackathons}: First runner-up in \textbf{Code-Init 2021} (NITC), First runner-up in \textbf{NITCkathon 2023} (JMRInfotech), Second runner-up in \textbf{InfinityHacks 2023} (internal hackathon at D.E. Shaw \& Co.), and participant in \textbf{Code for Good 2021} organized by JPMorgan Chase \& Co.}
+%                 \vspace{-2pt}
+                
+%                 \resumeItem{\textbf{IEEE CASS Speaker 2024}: Invited as a speaker for a session on \enquote{Career in Software Domain} for IEEE CASS SBC NITC.}
+%                 \vspace{-5pt}
+%             \resumeItemListEnd
+        
+
+% \section{Class Schedule - Fall 2025}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Cloud Computing}{: Friday 06:00-08:30 PM} \\
+%      \vspace{2pt}
+%     \textbf{Design and Analysis of Algorithms 1}{: Tuesday 02:00 - 04:30 PM} \\
+%      \vspace{2pt}
+%      \textbf{Foundations of Data Science}{: Tuesday 08:00 - 10:30 AM} \\
+% \text{Available for employment outside of aforementioned scheduled class hours.}
+
+ %    }}
+ % \end{itemize}
+
+\end{document}
