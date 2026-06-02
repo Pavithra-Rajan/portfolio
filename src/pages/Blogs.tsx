@@ -11,8 +11,14 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
-  {
-    id: "2",
+  {    id: "3",
+    title: "How I Became an MLH Fellow?",
+    excerpt: "It was a Tuesday afternoon when I heard the familiar ping of a new email notification. Naturally, I assumed it was another rejection. At that point, I had applied to nearly 400 summer...",
+    date: "2026-06-01",
+    readTime: "5 min",
+    tags: ["Career", "Fellowship", "Interview", "Personal Growth"],
+  },
+  {    id: "2",
     title: "How can your localhost:8080 grow up and move out?",
     excerpt: "Hosting and deployment sound scary in the same way “filing taxes” and “emotional availability” sound scary. You know they're important, but you'd really like to avoid them for as long as...",
     date: "2026-01-10",
