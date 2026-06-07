@@ -12,6 +12,14 @@ interface MusingPost {
 
 const musingPosts: MusingPost[] = [
   {
+    id: "5",
+    title: "Detours",
+    excerpt: "My mom has never been the best with directions. She's the kind of person who fumbles with Google Maps when my dad would task her to navigate us to a new location...",
+    date: "2026-06-07",
+    readTime: "4 min",
+    tags: ["symbolism", "prose", "thoughts", "mom"],
+  },
+  {
     id: "1",
     title: "The traces between the lines",
     excerpt: "The other day, I was penning down notes from a meeting to ensure that I captured all the details so as to not forget things the way I always do. My colleague stopped by later...",

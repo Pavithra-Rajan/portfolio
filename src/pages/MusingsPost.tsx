@@ -13,6 +13,7 @@ import fossmeet from "@/assets/caching_memories/memory10.jpg";
 import pizzastack from "@/assets/caching_memories/memory12.jpg";
 import nitc_end from "@/assets/caching_memories/memory2.jpg";
 import handwriting from "@/assets/handwriting.png";
+import detours from "@/assets/detours.png";
 const imageMap: Record<string, string> = {
   nitc,
   timezone,
@@ -179,6 +180,22 @@ As I bring these four transformative years to a close, reflecting on this incred
 
 ![Fin](nitc_end)
 `
+  },
+  "5": {
+    id: "5",
+    title: "Detours",
+    date: "2026-06-07",
+    readTime: "4 min",
+    tags: ["symbolism", "prose", "thoughts", "mom"],
+    heroImage: detours,
+    content: `
+My mom has never been the best with directions. She's the kind of person who fumbles with Google Maps when my dad would task her to navigate us to a new location. She'd zoom in and out of each street like clarity might be hiding somewhere between pixels. She'll say, with absolute confidence, "Take this left," only to realize seconds later she meant right. And then we'd find ourselves on a narrow lane or looping around the same roundabout for the third time, laughing but just a little bit frustrated.
+There was one time she missed the exit to my school, a lone turnoff planted right in the middle of a vast desert highway. It was the day I was receiving an award, the kind of moment you dream about your parents witnessing, and for me, that was the way to get their attention, even though I always had it. The detour pushed her miles away from where she was supposed to be. Still, minutes later, she burst through the back doors of the auditorium, breathless, her old loafers thudding against the floor, eyes scanning the crowd until she found me seated in the front row with a medal. She'd missed the announcement, but she saw me. That was enough for her. Somehow, even then, it was enough for me too, though I still tease her about it every now and then.
+Every time she was assigned a new construction project and had to report to an unfamiliar site office, my dad and I became her unofficial navigation team. On weekends, we'd pile into the car and drive the route with her, building muscle memory out of repetition. We named the landmarks like mnemonic clues: "Turn left at the house with the big palm tree," "Right after the blue hoarding with the Chevrolet ad." She'd laugh at herself when she got turned around, then try again, never one to give up just because the roads weren't easy.
+For someone who's always been a little turned around behind the wheel, my mother has somehow always known the way when it matters.
+Motherhood wasn't a straight road either. There were detours along the way, moments when the path wasn't clear. But she always found her way back. If she couldn't return the way she came, she'd forge a new path. She didn't abandon the journey just because it was difficult. She kept going.
+Her inner GPS wasn't powered by satellites or apps, but by something more durable, which was instinct, resolve, and love. If she felt lost, she didn't panic. She kept driving through detours and dead ends, through exhaustion and uncertainty. That's how she built our lives. Even now, if you hand her the keys and ask her to get somewhere unfamiliar, she'll probably miss a turn or two. She'll call, flustered, asking, "Was I supposed to take the flyover or go under it?" But if you ask her how to calm a 24-year-old child crying over life's latest curveball, or how to measure contract variations and change orders in a project, or how to show up, she would just know.
+So no, my mom has never been great with directions. But she's always known the way.`
   },
 
 };
