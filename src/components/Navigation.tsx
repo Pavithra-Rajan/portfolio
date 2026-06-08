@@ -12,6 +12,7 @@ const navItems = [
   { label: "Blogs", path: "/blogs", key: "B" },
   { label: "Musings", path: "/musings", key: "M" },
   { label: "Art", path: "/art", key: "A" },
+  { label: "Reading", path: "/reading", key: "E" },
   { label: "Projects", path: "/projects", key: "P" },
   { label: "Work", path: "/work", key: "W" },
   { label: "Resume", path: "/resume", key: "R" },
