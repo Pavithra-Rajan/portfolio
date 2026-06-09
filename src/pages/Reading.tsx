@@ -11,7 +11,20 @@ interface Book {
   outline: string[];
 }
 
-const books: Book[] = [];
+const books: Book[] = [
+  {
+    id: "dots-and-lines",
+    title: "Dots and Lines",
+    author: "Anthony Bonato",
+    year: "2025",
+    status: "reading",
+    outline: [
+      "The hidden networks behind social media, AI, and nature.",
+      "Graph theory smuggled in as storytelling—dots, lines, and everything they connect.",
+      "Picked off the shelf at the Cupertino library, Santa Clara County.",
+    ],
+  },
+];
 
 const shelves: { status: Book["status"]; label: string }[] = [
   { status: "reading", label: "currently reading" },
