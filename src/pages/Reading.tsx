@@ -24,6 +24,17 @@ const books: Book[] = [
       "Picked off the shelf at the Cupertino library, Santa Clara County.",
     ],
   },
+  {
+    id: "the-mistake",
+    title: "The Mistake",
+    author: "Elle Kennedy",
+    year: "2015",
+    status: "reading",
+    outline: [
+      "Off-Campus #2: Logan, Grace, and a do-over that has to be earned.",
+      "Second chances only count if you show up differently the second time.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
