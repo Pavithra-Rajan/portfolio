@@ -35,6 +35,18 @@ const books: Book[] = [
       "Second chances only count if you show up differently the second time.",
     ],
   },
+  {
+    id: "atomic-habits",
+    title: "Atomic Habits",
+    author: "James Clear",
+    year: "2018",
+    status: "finished",
+    outline: [
+      "Small 1% improvements compound into remarkable results.",
+      "Systems over goals: you fall to the level of your systems.",
+      "Make it obvious, attractive, easy, and satisfying.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
