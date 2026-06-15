@@ -47,6 +47,18 @@ const books: Book[] = [
       "Make it obvious, attractive, easy, and satisfying.",
     ],
   },
+  {
+    id: "it-ends-with-us",
+    title: "It Ends with Us",
+    author: "Colleen Hoover",
+    year: "2016",
+    status: "finished",
+    outline: [
+      "Lily Bloom, a flower shop, and a love that slowly stops feeling safe.",
+      "Sometimes the bravest thing you can do is break the cycle.",
+      "\"It stops here. With me and you. It ends with us.\"",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
