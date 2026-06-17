@@ -59,6 +59,18 @@ const books: Book[] = [
       "\"It stops here. With me and you. It ends with us.\"",
     ],
   },
+  {
+    id: "it-starts-with-us",
+    title: "It Starts with Us",
+    author: "Colleen Hoover",
+    year: "2022",
+    status: "finished",
+    outline: [
+      "The other side of the story—Atlas's side—and the after.",
+      "Second chances are quieter than first ones, and better for it.",
+      "Healing isn't forgetting; it's choosing differently this time.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
