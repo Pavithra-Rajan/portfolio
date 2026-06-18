@@ -71,6 +71,18 @@ const books: Book[] = [
       "Healing isn't forgetting; it's choosing differently this time.",
     ],
   },
+  {
+    id: "normal-people",
+    title: "Normal People",
+    author: "Sally Rooney",
+    year: "2018",
+    status: "finished",
+    outline: [
+      "Connell and Marianne, orbiting each other from Carricklea to Trinity.",
+      "How much gets lost in the things people almost say.",
+      "Two people can change each other for good and still not stay.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
