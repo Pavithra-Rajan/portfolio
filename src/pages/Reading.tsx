@@ -83,6 +83,18 @@ const books: Book[] = [
       "Two people can change each other for good and still not stay.",
     ],
   },
+  {
+    id: "ikigai",
+    title: "Ikigai",
+    author: "García & Miralles",
+    year: "2016",
+    status: "finished",
+    outline: [
+      "The Japanese idea of a reason to get up in the morning.",
+      "Lessons from Okinawa: small pleasures, movement, community, purpose.",
+      "Stay busy with what matters, and never fully retire from it.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
