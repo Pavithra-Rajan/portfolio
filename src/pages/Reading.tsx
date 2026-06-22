@@ -95,6 +95,17 @@ const books: Book[] = [
       "Stay busy with what matters, and never fully retire from it.",
     ],
   },
+  {
+    id: "hunger-games",
+    title: "The Hunger Games",
+    author: "Suzanne Collins",
+    year: "2008",
+    status: "finished",
+    outline: [
+      "Katniss volunteers as tribute, and the arena is never the same.",
+      "Survival as performance—the Capitol is always watching.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
