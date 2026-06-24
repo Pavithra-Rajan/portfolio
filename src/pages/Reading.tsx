@@ -106,6 +106,17 @@ const books: Book[] = [
       "Survival as performance—the Capitol is always watching.",
     ],
   },
+  {
+    id: "catching-fire",
+    title: "Catching Fire",
+    author: "Suzanne Collins",
+    year: "2009",
+    status: "finished",
+    outline: [
+      "The victory tour, the Quarter Quell, and a spark that won't go out.",
+      "\"Remember who the real enemy is.\"",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
