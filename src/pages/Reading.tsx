@@ -117,6 +117,17 @@ const books: Book[] = [
       "\"Remember who the real enemy is.\"",
     ],
   },
+  {
+    id: "mockingjay",
+    title: "Mockingjay",
+    author: "Suzanne Collins",
+    year: "2010",
+    status: "finished",
+    outline: [
+      "Rebellion, propaganda, and what war costs the ones who fight it.",
+      "Even symbols are people underneath.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
