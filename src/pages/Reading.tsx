@@ -128,6 +128,17 @@ const books: Book[] = [
       "Even symbols are people underneath.",
     ],
   },
+  {
+    id: "divergent",
+    title: "Divergent",
+    author: "Veronica Roth",
+    year: "2011",
+    status: "finished",
+    outline: [
+      "Five factions, one choice, and Tris refusing to fit a single box.",
+      "Faction before blood—until it isn't.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
