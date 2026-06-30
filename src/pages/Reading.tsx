@@ -139,6 +139,17 @@ const books: Book[] = [
       "Faction before blood—until it isn't.",
     ],
   },
+  {
+    id: "insurgent",
+    title: "Insurgent",
+    author: "Veronica Roth",
+    year: "2012",
+    status: "finished",
+    outline: [
+      "The factions at war, and secrets worth dying to protect.",
+      "Guilt and grief make unreliable compasses.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
