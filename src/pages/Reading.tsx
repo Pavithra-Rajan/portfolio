@@ -150,6 +150,17 @@ const books: Book[] = [
       "Guilt and grief make unreliable compasses.",
     ],
   },
+  {
+    id: "allegiant",
+    title: "Allegiant",
+    author: "Veronica Roth",
+    year: "2013",
+    status: "finished",
+    outline: [
+      "Beyond the fence, the world is bigger and messier than the factions.",
+      "An ending brave enough to divide every reader who got there.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
