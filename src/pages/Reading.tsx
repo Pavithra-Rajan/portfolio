@@ -161,6 +161,18 @@ const books: Book[] = [
       "An ending brave enough to divide every reader who got there.",
     ],
   },
+  {
+    id: "book-thief",
+    title: "The Book Thief",
+    author: "Markus Zusak",
+    year: "2005",
+    status: "finished",
+    outline: [
+      "Narrated by Death, who is haunted by humans.",
+      "Liesel steals books in Nazi Germany because words are worth stealing.",
+      "Proof that language can be shelter.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
