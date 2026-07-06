@@ -173,6 +173,18 @@ const books: Book[] = [
       "Proof that language can be shelter.",
     ],
   },
+  {
+    id: "secret-seven",
+    title: "The Secret Seven (all 15)",
+    author: "Enid Blyton",
+    year: "1949–1963",
+    status: "finished",
+    outline: [
+      "All fifteen of them—badges, passwords, and a garden shed for headquarters.",
+      "Mysteries solved before dinner, every single time.",
+      "An important part of childhood; where the reading habit began.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
