@@ -185,6 +185,18 @@ const books: Book[] = [
       "An important part of childhood; where the reading habit began.",
     ],
   },
+  {
+    id: "wimpy-kid",
+    title: "Diary of a Wimpy Kid (series)",
+    author: "Jeff Kinney",
+    year: "2007–",
+    status: "finished",
+    outline: [
+      "Greg Heffley's stick-figure chronicles of surviving middle school.",
+      "Read cover to cover, again and again—another cornerstone of childhood.",
+      "Proof that books can just be fun.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
