@@ -197,6 +197,18 @@ const books: Book[] = [
       "Proof that books can just be fun.",
     ],
   },
+  {
+    id: "today-tonight-tomorrow",
+    title: "Today Tonight Tomorrow",
+    author: "Rachel Lynn Solomon",
+    year: "2020",
+    status: "finished",
+    outline: [
+      "Rowan and Neil, four years of rivalry, one last night in Seattle.",
+      "A senior-year scavenger hunt that turns enemies into something else.",
+      "Loving a city and a person in the same twenty-four hours.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
