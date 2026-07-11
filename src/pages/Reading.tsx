@@ -209,6 +209,18 @@ const books: Book[] = [
       "Loving a city and a person in the same twenty-four hours.",
     ],
   },
+  {
+    id: "good-intentions",
+    title: "Good Intentions",
+    author: "Kasim Ali",
+    year: "2022",
+    status: "finished",
+    outline: [
+      "Nur, caught between the person he loves and the family he can't disappoint.",
+      "Four years of a secret is its own kind of lie.",
+      "Love asks for honesty long before it asks for permission.",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
