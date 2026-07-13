@@ -221,6 +221,17 @@ const books: Book[] = [
       "Love asks for honesty long before it asks for permission.",
     ],
   },
+  {
+    id: "great-gatsby",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: "1925",
+    status: "up-next",
+    outline: [
+      "The green light, the parties, and the man who built himself for one person.",
+      "\"So we beat on, boats against the current, borne back ceaselessly into the past.\"",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
