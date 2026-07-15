@@ -25,11 +25,17 @@ export function Footer() {
             >
               LinkedIn
             </a>
-            <a 
+            <a
               href="mailto:pavithra.rajan01@gmail.com"
               className="type-link hover:text-foreground transition-colors"
             >
               Email
+            </a>
+            <a
+              href="/feed.xml"
+              className="type-link hover:text-foreground transition-colors"
+            >
+              RSS
             </a>
           </div>
         </div>

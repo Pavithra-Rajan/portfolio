@@ -1,57 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
-
-interface MusingPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-}
-
-const musingPosts: MusingPost[] = [
-  {
-    id: "5",
-    title: "Detours",
-    excerpt: "My mom has never been the best with directions. She's the kind of person who fumbles with Google Maps when my dad would task her to navigate us to a new location...",
-    date: "2026-06-07",
-    readTime: "4 min",
-    tags: ["symbolism", "prose", "thoughts", "mom"],
-  },
-  {
-    id: "1",
-    title: "The traces between the lines",
-    excerpt: "The other day, I was penning down notes from a meeting to ensure that I captured all the details so as to not forget things the way I always do. My colleague stopped by later...",
-    date: "2025-05-22",
-    readTime: "3 min",
-    tags: ["symbolism", "prose", "thoughts"],
-  },
-  {
-    id: "2",
-    title: "Time Zones",
-    excerpt: "Back in middle school, I studied a chapter in Geography called \"Latitudes and Longitudes\", which covered the different time zones across the world. The text had interesting questions at the end...",
-    date: "2025-01-01",
-    readTime: "3 min",
-    tags: ["symbolism", "prose", "thoughts"],
-  },
-  {
-    id: "3",
-    title: "The Un-Thrown Trash",
-    excerpt: "When I was growing up, my mother had a strict rule: throwing out the trash every evening before my parents came home. Forgetting this chore was inexcusable, as she insisted...",
-    date: "2024-09-15",
-    readTime: "3 min",
-    tags: ["symbolism", "prose", "thoughts"],
-  },
-  {
-    id: "4",
-    title: "Cache-ing Memories",
-    excerpt: "Note: While my page has maintained a strict monochromatic theme so far, I am compelled to break away from it as my college memories have infused vibrant colours into my life. They...",
-    date: "2023-05-22",
-    readTime: "12 min",
-    tags: ["NITC", "memories", "college life"],
-  },
-];
+import { musingPosts } from "@/data/posts";
 
 export default function Blogs() {
   return (

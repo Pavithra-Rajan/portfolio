@@ -1,40 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "react-router-dom";
-
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-}
-
-const blogPosts: BlogPost[] = [
-  {    id: "3",
-    title: "How I Became an MLH Fellow?",
-    excerpt: "It was a Tuesday afternoon when I heard the familiar ping of a new email notification. Naturally, I assumed it was another rejection. At that point, I had applied to nearly 400 summer...",
-    date: "2026-06-01",
-    readTime: "5 min",
-    tags: ["Career", "Fellowship", "Interview", "Personal Growth"],
-  },
-  {    id: "2",
-    title: "How can your localhost:8080 grow up and move out?",
-    excerpt: "Hosting and deployment sound scary in the same way “filing taxes” and “emotional availability” sound scary. You know they're important, but you'd really like to avoid them for as long as...",
-    date: "2026-01-10",
-    readTime: "7 min",
-    tags: ["Hosting", "Deployment", "DNS"],
-  },
-  {
-    id: "1",
-    title: "Beauty lies in the AI of the beholder",
-    excerpt: "Well, well, well. Looks like we've reached a new level of society's obsession with rating our looks. Now, not only do we have to deal with humans judging us, but machines too!",
-    date: "2020-07-23",
-    readTime: "6 min",
-    tags: ["Machine Learning", "Deep Learning", "Python"],
-  },
-  
-];
+import { blogPosts } from "@/data/posts";
 
 export default function Blogs() {
   return (
