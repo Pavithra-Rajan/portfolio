@@ -24,7 +24,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="key group"
+      className="key group px-2.5"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       <span className="text-xs mr-1.5 opacity-50 group-hover:opacity-100 transition-opacity font-mono text-muted-foreground">

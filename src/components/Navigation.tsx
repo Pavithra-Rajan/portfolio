@@ -35,12 +35,12 @@ function NavItems() {
             to={item.path}
             onClick={handleKeyClick}
             className={cn(
-              "key group",
-              isActive && "active bg-primary text-primary-foreground"
+              "key group px-2.5",
+              isActive && "active !bg-primary !text-primary-foreground"
             )}
           >
             <span className={cn(
-              "text-xs mr-1.5 opacity-50 group-hover:opacity-100 transition-opacity font-mono",
+              "text-xs mr-1 opacity-50 group-hover:opacity-100 transition-opacity font-mono",
               isActive ? "text-primary-foreground/70" : "text-muted-foreground"
             )}>
               {item.key}
@@ -69,18 +69,19 @@ export function Navigation() {
           <Link 
             to="/" 
             onClick={handleKeyClick}
-            className="font-mono text-lg font-semibold tracking-tight text-foreground hover:text-primary transition-colors"
+            className="font-mono text-lg font-semibold tracking-tight text-foreground hover:text-primary transition-colors whitespace-nowrap"
           >
             Pavithra Rajan
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex flex-wrap items-center gap-2">
+          {/* Desktop Navigation: theme toggle rides the key row so it wraps with it */}
+          <div className="hidden md:flex flex-wrap items-center justify-end gap-1.5">
             <NavItems />
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu */}
-          {isMobile ? (
+          {isMobile && (
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <div className="flex items-center gap-2">
                 <ThemeToggle />
@@ -104,7 +105,7 @@ export function Navigation() {
                         }}
                         className={cn(
                           "key group text-base py-2",
-                          isActive && "active bg-primary text-primary-foreground px-2 rounded"
+                          isActive && "active !bg-primary !text-primary-foreground px-2 rounded"
                         )}
                       >
                         <span className={cn(
@@ -120,8 +121,6 @@ export function Navigation() {
                 </div>
               </SheetContent>
             </Sheet>
-          ) : (
-            <ThemeToggle />
           )}
         </div>
       </div>
