@@ -232,6 +232,17 @@ const books: Book[] = [
       "\"So we beat on, boats against the current, borne back ceaselessly into the past.\"",
     ],
   },
+  {
+    id: "careless-people",
+    title: "Careless People",
+    author: "Sarah Wynn-Williams",
+    year: "2025",
+    status: "finished",
+    outline: [
+      "An insider's memoir of seven years inside Facebook's power circle.",
+      "What happens when idealism meets a company that stops asking \"should we?\"",
+    ],
+  },
 ];
 
 const shelves: { status: Book["status"]; label: string }[] = [
