@@ -29,34 +29,21 @@ const books: Book[] = [
     title: "The Mistake",
     author: "Elle Kennedy",
     year: "2015",
-    status: "reading",
+    status: "finished",
     outline: [
       "Off-Campus #2: Logan, Grace, and a do-over that has to be earned.",
       "Second chances only count if you show up differently the second time.",
     ],
   },
   {
-    id: "atomic-habits",
-    title: "Atomic Habits",
-    author: "James Clear",
-    year: "2018",
+    id: "careless-people",
+    title: "Careless People",
+    author: "Sarah Wynn-Williams",
+    year: "2025",
     status: "finished",
     outline: [
-      "Small 1% improvements compound into remarkable results.",
-      "Systems over goals: you fall to the level of your systems.",
-      "Make it obvious, attractive, easy, and satisfying.",
-    ],
-  },
-  {
-    id: "it-ends-with-us",
-    title: "It Ends with Us",
-    author: "Colleen Hoover",
-    year: "2016",
-    status: "finished",
-    outline: [
-      "Lily Bloom, a flower shop, and a love that slowly stops feeling safe.",
-      "Sometimes the bravest thing you can do is break the cycle.",
-      "\"It stops here. With me and you. It ends with us.\"",
+      "An insider's memoir of seven years inside Facebook's power circle.",
+      "What happens when idealism meets a company that stops asking \"should we?\"",
     ],
   },
   {
@@ -69,6 +56,18 @@ const books: Book[] = [
       "The other side of the story—Atlas's side—and the after.",
       "Second chances are quieter than first ones, and better for it.",
       "Healing isn't forgetting; it's choosing differently this time.",
+    ],
+  },
+  {
+    id: "it-ends-with-us",
+    title: "It Ends with Us",
+    author: "Colleen Hoover",
+    year: "2016",
+    status: "finished",
+    outline: [
+      "Lily Bloom, a flower shop, and a love that slowly stops feeling safe.",
+      "Sometimes the bravest thing you can do is break the cycle.",
+      "\"It stops here. With me and you. It ends with us.\"",
     ],
   },
   {
@@ -96,36 +95,51 @@ const books: Book[] = [
     ],
   },
   {
-    id: "hunger-games",
-    title: "The Hunger Games",
-    author: "Suzanne Collins",
-    year: "2008",
+    id: "atomic-habits",
+    title: "Atomic Habits",
+    author: "James Clear",
+    year: "2018",
     status: "finished",
     outline: [
-      "Katniss volunteers as tribute, and the arena is never the same.",
-      "Survival as performance—the Capitol is always watching.",
+      "Small 1% improvements compound into remarkable results.",
+      "Systems over goals: you fall to the level of your systems.",
+      "Make it obvious, attractive, easy, and satisfying.",
     ],
   },
   {
-    id: "catching-fire",
-    title: "Catching Fire",
-    author: "Suzanne Collins",
-    year: "2009",
+    id: "good-intentions",
+    title: "Good Intentions",
+    author: "Kasim Ali",
+    year: "2022",
     status: "finished",
     outline: [
-      "The victory tour, the Quarter Quell, and a spark that won't go out.",
-      "\"Remember who the real enemy is.\"",
+      "Nur, caught between the person he loves and the family he can't disappoint.",
+      "Four years of a secret is its own kind of lie.",
+      "Love asks for honesty long before it asks for permission.",
     ],
   },
   {
-    id: "mockingjay",
-    title: "Mockingjay",
-    author: "Suzanne Collins",
-    year: "2010",
+    id: "book-thief",
+    title: "The Book Thief",
+    author: "Markus Zusak",
+    year: "2005",
     status: "finished",
     outline: [
-      "Rebellion, propaganda, and what war costs the ones who fight it.",
-      "Even symbols are people underneath.",
+      "Narrated by Death, who is haunted by humans.",
+      "Liesel steals books in Nazi Germany because words are worth stealing.",
+      "Proof that language can be shelter.",
+    ],
+  },
+  {
+    id: "today-tonight-tomorrow",
+    title: "Today Tonight Tomorrow",
+    author: "Rachel Lynn Solomon",
+    year: "2020",
+    status: "finished",
+    outline: [
+      "Rowan and Neil, four years of rivalry, one last night in Seattle.",
+      "A senior-year scavenger hunt that turns enemies into something else.",
+      "Loving a city and a person in the same twenty-four hours.",
     ],
   },
   {
@@ -162,27 +176,91 @@ const books: Book[] = [
     ],
   },
   {
-    id: "book-thief",
-    title: "The Book Thief",
-    author: "Markus Zusak",
-    year: "2005",
+    id: "hunger-games",
+    title: "The Hunger Games",
+    author: "Suzanne Collins",
+    year: "2008",
     status: "finished",
     outline: [
-      "Narrated by Death, who is haunted by humans.",
-      "Liesel steals books in Nazi Germany because words are worth stealing.",
-      "Proof that language can be shelter.",
+      "Katniss volunteers as tribute, and the arena is never the same.",
+      "Survival as performance—the Capitol is always watching.",
     ],
   },
   {
-    id: "secret-seven",
-    title: "The Secret Seven (all 15)",
-    author: "Enid Blyton",
-    year: "1949–1963",
+    id: "catching-fire",
+    title: "Catching Fire",
+    author: "Suzanne Collins",
+    year: "2009",
     status: "finished",
     outline: [
-      "All fifteen of them—badges, passwords, and a garden shed for headquarters.",
-      "Mysteries solved before dinner, every single time.",
-      "An important part of childhood; where the reading habit began.",
+      "The victory tour, the Quarter Quell, and a spark that won't go out.",
+      "\"Remember who the real enemy is.\"",
+    ],
+  },
+  {
+    id: "mockingjay",
+    title: "Mockingjay",
+    author: "Suzanne Collins",
+    year: "2010",
+    status: "finished",
+    outline: [
+      "Rebellion, propaganda, and what war costs the ones who fight it.",
+      "Even symbols are people underneath.",
+    ],
+  },
+  {
+    id: "lightning-thief",
+    title: "The Lightning Thief",
+    author: "Rick Riordan",
+    year: "2005",
+    status: "finished",
+    outline: [
+      "Percy learns he's the son of Poseidon—right as Zeus's master bolt goes missing.",
+      "A cross-country quest with a satyr, a daughter of Athena, and ten days to stop a war.",
+    ],
+  },
+  {
+    id: "sea-of-monsters",
+    title: "The Sea of Monsters",
+    author: "Rick Riordan",
+    year: "2006",
+    status: "finished",
+    outline: [
+      "Into the Bermuda Triangle for the Golden Fleece—and a kidnapped best friend.",
+      "Family is who claims you, not just who shares your blood.",
+    ],
+  },
+  {
+    id: "titans-curse",
+    title: "The Titan's Curse",
+    author: "Rick Riordan",
+    year: "2007",
+    status: "finished",
+    outline: [
+      "Annabeth is missing, Artemis is captured, and the sky is literally falling.",
+      "Some burdens you carry because no one else can hold them.",
+    ],
+  },
+  {
+    id: "battle-of-the-labyrinth",
+    title: "The Battle of the Labyrinth",
+    author: "Rick Riordan",
+    year: "2008",
+    status: "finished",
+    outline: [
+      "Daedalus's maze sprawls beneath America, shifting to match the mind that walks it.",
+      "The war reaches Camp Half-Blood through the one door nobody guarded.",
+    ],
+  },
+  {
+    id: "last-olympian",
+    title: "The Last Olympian",
+    author: "Rick Riordan",
+    year: "2009",
+    status: "finished",
+    outline: [
+      "Kronos marches on Manhattan while the gods are busy elsewhere.",
+      "The prophecy finally comes due—and the hero chooses what it means.",
     ],
   },
   {
@@ -198,27 +276,15 @@ const books: Book[] = [
     ],
   },
   {
-    id: "today-tonight-tomorrow",
-    title: "Today Tonight Tomorrow",
-    author: "Rachel Lynn Solomon",
-    year: "2020",
+    id: "secret-seven",
+    title: "The Secret Seven (all 15)",
+    author: "Enid Blyton",
+    year: "1949–1963",
     status: "finished",
     outline: [
-      "Rowan and Neil, four years of rivalry, one last night in Seattle.",
-      "A senior-year scavenger hunt that turns enemies into something else.",
-      "Loving a city and a person in the same twenty-four hours.",
-    ],
-  },
-  {
-    id: "good-intentions",
-    title: "Good Intentions",
-    author: "Kasim Ali",
-    year: "2022",
-    status: "finished",
-    outline: [
-      "Nur, caught between the person he loves and the family he can't disappoint.",
-      "Four years of a secret is its own kind of lie.",
-      "Love asks for honesty long before it asks for permission.",
+      "All fifteen of them—badges, passwords, and a garden shed for headquarters.",
+      "Mysteries solved before dinner, every single time.",
+      "An important part of childhood; where the reading habit began.",
     ],
   },
   {
@@ -230,17 +296,6 @@ const books: Book[] = [
     outline: [
       "The green light, the parties, and the man who built himself for one person.",
       "\"So we beat on, boats against the current, borne back ceaselessly into the past.\"",
-    ],
-  },
-  {
-    id: "careless-people",
-    title: "Careless People",
-    author: "Sarah Wynn-Williams",
-    year: "2025",
-    status: "finished",
-    outline: [
-      "An insider's memoir of seven years inside Facebook's power circle.",
-      "What happens when idealism meets a company that stops asking \"should we?\"",
     ],
   },
 ];
@@ -260,6 +315,14 @@ const statusLabels: Record<Book["status"], string> = {
 // Deterministic spine variation so the shelf looks hand-stacked
 const spineHeights = ["h-44", "h-52", "h-40", "h-48", "h-56", "h-44", "h-52", "h-48"];
 const spineWidths = ["w-11", "w-12", "w-10", "w-12", "w-11", "w-14", "w-10", "w-12"];
+const spineColors = [
+  "bg-spine-1",
+  "bg-spine-4",
+  "bg-spine-2",
+  "bg-spine-6",
+  "bg-spine-3",
+  "bg-spine-5",
+];
 const spineWidthPx: Record<string, number> = { "w-10": 40, "w-11": 44, "w-12": 48, "w-14": 56 };
 const SHELF_GAP_PX = 8; // gap-2
 const SHELF_PADDING_PX = 16; // px-2 on each row
@@ -271,7 +334,7 @@ function BookSpine({ book, index, onPull }: { book: Book; index: number; onPull:
       title={`${book.title} — ${book.author}`}
       className={`group relative flex-shrink-0 ${spineHeights[index % spineHeights.length]} ${
         spineWidths[index % spineWidths.length]
-      } border-2 border-ink-light bg-background rounded-sm
+      } ${spineColors[index % spineColors.length]} border-2 border-ink-light rounded-sm
       flex flex-col items-center justify-between py-3
       transition-transform duration-200 ease-out
       hover:-translate-y-3 hover:border-ink focus-visible:-translate-y-3 focus-visible:border-ink

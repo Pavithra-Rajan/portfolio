@@ -75,6 +75,14 @@ export default {
           shadow: "hsl(var(--key-shadow))",
           pressed: "hsl(var(--key-pressed))",
         },
+        spine: {
+          1: "hsl(var(--spine-1))",
+          2: "hsl(var(--spine-2))",
+          3: "hsl(var(--spine-3))",
+          4: "hsl(var(--spine-4))",
+          5: "hsl(var(--spine-5))",
+          6: "hsl(var(--spine-6))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -47,6 +47,14 @@
     --key-shadow: 40 15% 80%;
     --key-pressed: 40 10% 88%;
 
+    /* Book spine tints - faded cloth bindings on paper */
+    --spine-1: 15 32% 87%;
+    --spine-2: 45 45% 85%;
+    --spine-3: 80 22% 85%;
+    --spine-4: 210 26% 87%;
+    --spine-5: 320 16% 88%;
+    --spine-6: 165 20% 85%;
+
     /* Sidebar */
     --sidebar-background: 40 20% 94%;
     --sidebar-foreground: 0 0% 15%;
@@ -95,6 +103,13 @@
     --key-bg: 0 0% 12%;
     --key-shadow: 0 0% 5%;
     --key-pressed: 0 0% 18%;
+
+    --spine-1: 15 28% 16%;
+    --spine-2: 45 30% 15%;
+    --spine-3: 80 18% 14%;
+    --spine-4: 210 24% 17%;
+    --spine-5: 320 14% 16%;
+    --spine-6: 165 18% 14%;
 
     --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 40 15% 85%;
