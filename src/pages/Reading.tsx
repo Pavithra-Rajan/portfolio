@@ -11,6 +11,18 @@ interface Book {
   outline: string[];
 }
 
+// Cover images keyed by book id (src/assets/covers/<id>.jpg)
+const coverModules = import.meta.glob("../assets/covers/*.jpg", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+const covers: Record<string, string> = Object.fromEntries(
+  Object.entries(coverModules).map(([path, src]) => [
+    path.split("/").pop()!.replace(".jpg", ""),
+    src,
+  ]),
+);
+
 const books: Book[] = [
   {
     id: "dots-and-lines",
@@ -20,8 +32,8 @@ const books: Book[] = [
     status: "reading",
     outline: [
       "The hidden networks behind social media, AI, and nature.",
-      "Graph theory smuggled in as storytelling—dots, lines, and everything they connect.",
-      "Picked off the shelf at the Cupertino library, Santa Clara County.",
+      "Graph theory smuggled in as storytelling where dots, lines, and everything they connect.",
+      "Picked off the shelf at the Cupertino library, Santa Clara.",
     ],
   },
   {
@@ -53,9 +65,9 @@ const books: Book[] = [
     year: "2022",
     status: "finished",
     outline: [
-      "The other side of the story—Atlas's side—and the after.",
+      "Atlas's side of the story and the after tale.",
       "Second chances are quieter than first ones, and better for it.",
-      "Healing isn't forgetting; it's choosing differently this time.",
+      "Healing isn't forgetting but choosing differently this time.",
     ],
   },
   {
@@ -215,7 +227,7 @@ const books: Book[] = [
     year: "2005",
     status: "finished",
     outline: [
-      "Percy learns he's the son of Poseidon—right as Zeus's master bolt goes missing.",
+      "Percy learns he's the son of Poseidon, right as Zeus's master bolt goes missing.",
       "A cross-country quest with a satyr, a daughter of Athena, and ten days to stop a war.",
     ],
   },
@@ -226,7 +238,7 @@ const books: Book[] = [
     year: "2006",
     status: "finished",
     outline: [
-      "Into the Bermuda Triangle for the Golden Fleece—and a kidnapped best friend.",
+      "Into the Bermuda Triangle for the Golden Fleece and a kidnapped best friend.",
       "Family is who claims you, not just who shares your blood.",
     ],
   },
@@ -260,14 +272,14 @@ const books: Book[] = [
     status: "finished",
     outline: [
       "Kronos marches on Manhattan while the gods are busy elsewhere.",
-      "The prophecy finally comes due—and the hero chooses what it means.",
+      "The prophecy finally comes due and the hero chooses what it means.",
     ],
   },
   {
     id: "wimpy-kid",
     title: "Diary of a Wimpy Kid (series)",
     author: "Jeff Kinney",
-    year: "2007–",
+    year: "2007–Present",
     status: "finished",
     outline: [
       "Greg Heffley's stick-figure chronicles of surviving middle school.",
@@ -491,26 +503,34 @@ export default function Reading() {
         <DialogContent className="max-w-2xl w-[95vw] p-0 border-border bg-background overflow-hidden">
           {selectedBook && (
             <div className="flex flex-col sm:flex-row">
-              {/* Front cover, outline only */}
+              {/* Front cover; falls back to a drawn cover when no image exists */}
               <div className="sm:w-56 flex-shrink-0 p-6 flex items-center justify-center border-b sm:border-b-0 sm:border-r border-border">
-                <div className="w-40 aspect-[2/3] border-2 border-ink rounded-sm p-3 flex flex-col justify-between bg-background">
-                  <div className="space-y-1">
-                    <div className="h-px bg-ink" />
-                    <div className="h-px bg-ink" />
+                {covers[selectedBook.id] ? (
+                  <img
+                    src={covers[selectedBook.id]}
+                    alt={`${selectedBook.title} — book cover`}
+                    className="w-40 aspect-[2/3] object-cover border-2 border-ink rounded-sm bg-background"
+                  />
+                ) : (
+                  <div className="w-40 aspect-[2/3] border-2 border-ink rounded-sm p-3 flex flex-col justify-between bg-background">
+                    <div className="space-y-1">
+                      <div className="h-px bg-ink" />
+                      <div className="h-px bg-ink" />
+                    </div>
+                    <div className="text-center px-1">
+                      <p className="font-mono text-xs font-medium text-foreground leading-snug">
+                        {selectedBook.title}
+                      </p>
+                      <p className="font-mono text-[10px] text-muted-foreground mt-2">
+                        {selectedBook.author}
+                      </p>
+                    </div>
+                    <div className="space-y-1">
+                      <div className="h-px bg-ink" />
+                      <div className="h-px bg-ink" />
+                    </div>
                   </div>
-                  <div className="text-center px-1">
-                    <p className="font-mono text-xs font-medium text-foreground leading-snug">
-                      {selectedBook.title}
-                    </p>
-                    <p className="font-mono text-[10px] text-muted-foreground mt-2">
-                      {selectedBook.author}
-                    </p>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="h-px bg-ink" />
-                    <div className="h-px bg-ink" />
-                  </div>
-                </div>
+                )}
               </div>
 
               {/* Outline */}
